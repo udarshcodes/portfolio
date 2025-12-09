@@ -176,7 +176,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 
 
-/**MOBILE**/
+
 .hero-swag-img {
   width: 100%;
   max-width: 260px;
@@ -412,7 +412,4 @@ body {
   right: 0;
   z-index: 100;
 }
-/**main, .site-footer {
-  position: relative;
-  z-index: 1;
-}**/
+
