@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="delay-3" style={{ fontWeight: 600, color: "var(--accent)", fontSize: "1.3rem", marginBottom: "2.5rem", letterSpacing: "0.02em" }}>
           <Typewriter
             options={{
-              strings: ['CS Undergrad', 'AI/ML Researcher', 'Builder of CodeSentinel'],
+              strings: ['CS Undergrad @ VIT Chennai', 'AI/ML Researcher @ IIT Ropar', 'Builder of CodeSentinel', 'Google Student Ambassador', 'Full-Stack Developer'],
               autoStart: true,
               loop: true,
               delay: 50,
@@ -35,9 +35,9 @@ export default function Hero() {
           <a href="#contact" className="btn btn-outline">
             Hire Me / Contact
           </a>
-          <button className="btn btn-outline" style={{ display: "flex", gap: "0.5rem" }} onClick={() => alert("Resume upload pending!")}>
+          <a href="/pdf/OCI_FOUNDATIONS_ASSOCIATE.pdf" download className="btn btn-outline" style={{ display: "flex", gap: "0.5rem" }}>
             <FiFileText /> Download Resume
-          </button>
+          </a>
         </div>
 
         <div className="flex-center gap-6 delay-3" style={{ color: "var(--text-secondary)", fontSize: "0.85rem" }}>

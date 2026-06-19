@@ -4,7 +4,9 @@ A personal portfolio website showcasing web development, AI, and cloud projects.
 
 ## Live Demo
 
-There is no live demo link currently specified in the repository. The project is a static site designed to be easily hosted on platforms like Vercel or GitHub Pages.
+**[View the Live Portfolio Here](https://udarshcodes.github.io/portfolio/)**
+
+Hosted via GitHub Pages.
 
 ## About
 
@@ -12,11 +14,12 @@ This is my personal portfolio built to serve as a central hub for my skills, edu
 
 ## Features
 
-- Toggle between dark and light themes using the navigation bar.
-- Read through a timeline detailing past internships and core committee roles.
-- Browse a grid of technical skills categorized by domain.
-- Access direct links to major projects, certification PDFs, and social profiles.
-- View a background particle effect that adapts to the active theme.
+- **Premium Glassmorphism UI:** Semi-transparent frosted-glass cards with subtle highlights and responsive drop shadows.
+- **Dynamic Theming:** Toggle between dark and light themes using the navigation bar.
+- **Interactive Background:** A network particle effect rendered on an HTML5 canvas that adapts to the active theme, with reduced-motion support for accessibility.
+- **Detailed Timelines:** Scroll through an academic and professional timeline detailing coursework, research internships, and core committee roles.
+- **Categorized Skills:** Browse a grid of technical skills structured by domain (AI/ML, Frontend, Backend, Cloud).
+- **Achievements & Certifications:** View major milestones, including the Nerds AI Quest Top 10 finish and Oracle/Microsoft certifications.
 
 ## Tech Stack
 
@@ -61,8 +64,10 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 ├── src/
 │   ├── components/
 │   │   ├── About.jsx
+│   │   ├── Achievements.jsx
 │   │   ├── Certifications.jsx
 │   │   ├── Contact.jsx
+│   │   ├── Education.jsx
 │   │   ├── Experience.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Hero.jsx
@@ -80,7 +85,8 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 
 ## What I learned or key decisions
 
+- **Glassmorphism Design:** Achieved a highly premium "frosted glass" aesthetic using CSS `backdrop-filter: blur()`, semi-transparent `rgba` variables, and specular border highlights without relying on Tailwind or external libraries.
 - **Custom Canvas Background:** Implemented the particle network effect natively using the HTML5 Canvas API instead of relying on heavy third-party libraries, keeping the bundle size small.
+- **Accessibility:** Incorporated `@media (prefers-reduced-motion: reduce)` to gracefully disable animations and canvas effects for users with sensitivity to motion.
 - **CSS Variables for Theming:** Used native CSS custom properties defined on the root element to handle dark and light modes, avoiding the need for CSS-in-JS libraries.
-- **Vanilla CSS:** Maintained standard CSS stylesheets to preserve explicit control over animations, vertical timelines, and complex card layouts rather than rewriting everything into utility classes.
 

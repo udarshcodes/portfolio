@@ -1,5 +1,5 @@
-import { FaReact, FaPython, FaNodeJs } from "react-icons/fa";
-import { SiPytorch, SiTensorflow, SiDjango, SiMongodb } from "react-icons/si";
+import { FaReact, FaPython } from "react-icons/fa";
+import { SiDjango, SiFastapi } from "react-icons/si";
 
 export default function About() {
   return (
@@ -21,28 +21,45 @@ export default function About() {
           </div>
           
           <p style={{ color: "var(--text-secondary)", lineHeight: "1.8", marginBottom: "1.5rem" }}>
-            I am a Computer Science undergraduate with a deep passion for Machine Learning, Generative AI, and Full-Stack Development. My journey started with building simple web interfaces and has evolved into orchestrating complex multi-agent LangGraph pipelines and conducting academic research.
+            I am a Computer Science undergraduate at VIT Chennai with a deep focus on AI/ML systems, agentic pipelines, and full-stack engineering. I built CodeSentinel — a fully autonomous 10-agent LangGraph system for enterprise-level code review and patching. I am currently a Summer Research Intern at IIT Ropar and a Google Student Ambassador (GID 5745), and I actively contribute to Microsoft Innovations Club, HackClub, and CYSCOM at VIT Chennai.
           </p>
           <p style={{ color: "var(--text-secondary)", lineHeight: "1.8" }}>
-            When I'm not coding, I'm participating in hackathons, exploring the latest models on Hugging Face, or organizing tech events as a core member of multiple university clubs.
+            I completed the Meta Back-End Developer Professional Certificate on Coursera, covering Django, Django REST Framework, React, Advanced React, databases, and API design. I hold 13+ certifications from Oracle, Microsoft, Google, IIT Madras, and HackerRank. I compete in hackathons, experiment with open-source LLMs on Hugging Face, and help organise tech events on campus.
           </p>
         </div>
 
         <div className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
           <div>
             <h3 style={{ margin: "0 0 1.5rem 0", color: "var(--text-primary)" }}>Core Technologies</h3>
-            <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", fontSize: "2.5rem", color: "var(--text-secondary)" }}>
+            <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", fontSize: "2.5rem", color: "var(--text-secondary)", alignItems: "center" }}>
                <FaPython title="Python" />
                <FaReact title="React" />
-               <FaNodeJs title="Node.js" />
                <SiDjango title="Django" />
-               <SiPytorch title="PyTorch" />
-               <SiTensorflow title="TensorFlow" />
-               <SiMongodb title="MongoDB" />
+               <SiFastapi title="FastAPI" />
+               <span className="chip" style={{ fontSize: "1rem", padding: "0.5rem 1rem" }}>LangGraph</span>
+               <span className="chip" style={{ fontSize: "1rem", padding: "0.5rem 1rem" }}>Groq</span>
+               <span className="chip" style={{ fontSize: "1rem", padding: "0.5rem 1rem" }}>tree-sitter</span>
             </div>
           </div>
           <div style={{ marginTop: "2rem", padding: "1rem", background: "rgba(168, 85, 247, 0.05)", borderRadius: "0.5rem", border: "1px solid rgba(168, 85, 247, 0.1)" }}>
-            <strong style={{ color: "var(--accent)" }}>Fun Fact:</strong> I love experimenting with prompting techniques to make AI models break their own rules (ethically, of course).
+            <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", justifyContent: "center" }}>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)" }}>10</div>
+                <div style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}>Agent Pipeline</div>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)" }}>5+</div>
+                <div style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}>Projects Built</div>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)" }}>13+</div>
+                <div style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}>Certifications</div>
+              </div>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--accent)" }}>Top 10</div>
+                <div style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}>Nerds AI Quest</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div style={{ display: "flex", gap: "1.5rem" }}>
           <a href="https://github.com/udarshcodes" target="_blank" rel="noreferrer" style={{ transition: "color 0.2s" }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>GitHub</a>
           <a href="https://www.linkedin.com/in/udarsh-goyal-256095383/" target="_blank" rel="noreferrer" style={{ transition: "color 0.2s" }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>LinkedIn</a>
-          <a href="#" style={{ transition: "color 0.2s" }} onClick={(e) => { e.preventDefault(); alert("Resume upload pending!"); }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Resume PDF</a>
+          <a href="/pdf/OCI_FOUNDATIONS_ASSOCIATE.pdf" target="_blank" rel="noreferrer" style={{ transition: "color 0.2s" }} onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'} onMouseLeave={e => e.currentTarget.style.color = 'var(--text-secondary)'}>Resume PDF</a>
         </div>
       </div>
     </footer>

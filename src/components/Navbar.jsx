@@ -2,6 +2,18 @@ import { Moon, Sun } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar({ theme, toggleTheme }) {
+  const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Education", href: "#education" },
+    { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
+    { label: "Certifications", href: "#certifications" },
+    { label: "Achievements", href: "#achievements" },
+    { label: "Contact", href: "#contact" }
+  ];
+
   return (
     <header>
       <div className="container nav-container">
@@ -10,11 +22,9 @@ export default function Navbar({ theme, toggleTheme }) {
         </div>
 
         <nav className="nav-links">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#certifications">Certs</a>
+          {navLinks.map((link, idx) => (
+            <a key={idx} href={link.href}>{link.label}</a>
+          ))}
         </nav>
 
         <div className="nav-actions">
