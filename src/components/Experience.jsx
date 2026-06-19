@@ -2,33 +2,38 @@ export default function Experience() {
   const experiences = [
     {
       role: "Summer Research Intern",
-      org: "IIT Ropar",
-      date: "May 2024 - Present",
-      impact: "Researching advanced Generative AI architectures and evaluating LLM performance metrics."
+      org: "Indian Institute of Technology, Ropar · Internship",
+      date: "May 2026 - Present · 2 mos",
+      location: "Punjab, India · Hybrid",
+      skills: ""
     },
     {
       role: "Google Student Ambassador",
-      org: "Google",
-      date: "Aug 2023 - Present",
-      impact: "Evangelizing Google Cloud and leading campus-wide technical workshops for 500+ students."
+      org: "Google · Part-time",
+      date: "Apr 2026 - Present · 3 mos",
+      location: "Remote",
+      skills: ""
     },
     {
-      role: "Core Committee Member",
-      org: "Microsoft Innovations Club VITC",
-      date: "Dec 2022 - Present",
-      impact: "Organized national-level hackathons and mentored freshmen in modern web development."
+      role: "Web Development and AI/ML Contributor",
+      org: "Microsoft Innovations Club VITC · Part-time",
+      date: "Oct 2025 - Present · 9 mos",
+      location: "Chennai, Tamil Nadu, India · On-site",
+      skills: "Prompt Engineering, Problem Solving and +5 skills"
     },
     {
-      role: "Technical Lead",
-      org: "HackClub VIT Chennai",
-      date: "Feb 2023 - Present",
-      impact: "Architected internal club portals and guided teams in building open-source projects."
+      role: "Full Stack and AI/ML Contributor",
+      org: "HackClub VIT Chennai · Part-time",
+      date: "Sep 2025 - Present · 10 mos",
+      location: "Chennai, Tamil Nadu, India · On-site",
+      skills: "Problem Solving, Generative AI and +8 skills"
     },
     {
-      role: "Member",
-      org: "CYSCOM VIT Chennai",
-      date: "Oct 2022 - Present",
-      impact: "Participated in CTF challenges and contributed to cybersecurity awareness campaigns."
+      role: "Technical Team Member",
+      org: "CYSCOM VIT Chennai · Part-time",
+      date: "Sep 2025 - Present · 10 mos",
+      location: "Chennai, Tamil Nadu, India · On-site",
+      skills: "Problem Solving, GitHub and +7 skills"
     }
   ];
 
@@ -44,8 +49,9 @@ export default function Experience() {
                 <h3 style={{ margin: 0, fontSize: "1.2rem", color: "var(--text-primary)" }}>{exp.role}</h3>
                 <span className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-secondary)" }}>{exp.date}</span>
               </div>
-              <h4 style={{ margin: "0 0 1rem 0", color: "var(--accent)", fontSize: "1rem", fontWeight: 500 }}>{exp.org}</h4>
-              <p style={{ margin: 0, color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.6" }}>{exp.impact}</p>
+              <h4 style={{ margin: "0 0 0.5rem 0", color: "var(--accent)", fontSize: "1rem", fontWeight: 500 }}>{exp.org}</h4>
+              <div style={{ color: "var(--text-secondary)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>{exp.location}</div>
+              {exp.skills && <div style={{ color: "var(--text-primary)", fontSize: "0.9rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "0.5rem" }}>❖ {exp.skills}</div>}
             </div>
           ))}
         </div>

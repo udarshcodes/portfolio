@@ -8,16 +8,15 @@ There is no live demo link currently specified in the repository. The project is
 
 ## About
 
-This is a personal portfolio project built by Udarsh Goyal, a computer science student. It serves as a central hub to display his skills, educational background, certifications, and hands-on projects in web development, machine learning, and cloud computing. The project started as a static HTML and JavaScript site and was later migrated to React to improve component maintainability and implement dynamic theming.
+This is my personal portfolio built to serve as a central hub for my skills, educational background, certifications, and hands-on projects. I built it to target recruiters and technical peers to demonstrate my competence in web development, machine learning, and cloud computing. The application is a frontend-only static site without a backend database.
 
 ## Features
 
-- View an interactive background particle constellation effect that adapts to the active theme.
-- Toggle seamlessly between dark and light themes using the navigation bar.
-- Read through a dynamic Hero section powered by a typewriter effect.
-- Explore a custom vertical timeline detailing past internships and core committee roles.
-- Browse a comprehensive grid of technical skills categorized by domain.
+- Toggle between dark and light themes using the navigation bar.
+- Read through a timeline detailing past internships and core committee roles.
+- Browse a grid of technical skills categorized by domain.
 - Access direct links to major projects, certification PDFs, and social profiles.
+- View a background particle effect that adapts to the active theme.
 
 ## Tech Stack
 
@@ -27,11 +26,11 @@ This is a personal portfolio project built by Udarsh Goyal, a computer science s
 | Build Tool | Vite |
 | Styling | Vanilla CSS / CSS Variables |
 | Icons | react-icons, lucide-react |
-| Animations | typewriter-effect |
+| Animations | typewriter-effect, HTML5 Canvas |
 
 ## Architecture
 
-The application is a single-page React frontend. `App.jsx` serves as the root container, managing the global light and dark theme state. The `NetworkBackground` component operates an HTML5 Canvas to render a dynamic particle effect independent of the main content flow. The site is structured into distinct functional components (`Hero`, `About`, `Experience`, `Projects`, `Skills`, `Certifications`, `Contact`, `Footer`) that are sequentially rendered to create a cohesive, scrollable landing page.
+The application is a single-page React frontend. The root `App.jsx` container manages the global light and dark theme state and passes it down. The `NetworkBackground` component operates an HTML5 Canvas to render a dynamic particle effect independent of the main content flow. The site is structured into distinct functional components—such as `Hero`, `About`, `Experience`, and `Projects`—that are sequentially rendered to create a cohesive, scrollable landing page.
 
 ## Running Locally
 
@@ -79,9 +78,9 @@ The application is a single-page React frontend. `App.jsx` serves as the root co
 └── vite.config.js
 ```
 
-## Key Decisions
+## What I learned or key decisions
 
-- **Migration to React:** Transitioned from a vanilla HTML and CSS setup to React and Vite to break the UI into reusable components, which simplified managing the theme state.
 - **Custom Canvas Background:** Implemented the particle network effect natively using the HTML5 Canvas API instead of relying on heavy third-party libraries, keeping the bundle size small.
 - **CSS Variables for Theming:** Used native CSS custom properties defined on the root element to handle dark and light modes, avoiding the need for CSS-in-JS libraries.
 - **Vanilla CSS:** Maintained standard CSS stylesheets to preserve explicit control over animations, vertical timelines, and complex card layouts rather than rewriting everything into utility classes.
+

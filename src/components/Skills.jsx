@@ -1,9 +1,9 @@
 export default function Skills() {
   const categories = [
-    { name: "Languages", skills: ["Python", "JavaScript", "TypeScript", "C#"] },
-    { name: "Frameworks", skills: ["React", "Django", "DRF", "FastAPI"] },
-    { name: "AI/ML", skills: ["LangGraph", "Groq", "ChromaDB", "tree-sitter"] },
-    { name: "Cloud", skills: ["Azure VM", "Vercel", "WSL2"] },
+    { name: "Programming Languages", skills: ["Python", "R", "C", "C++", "Java", "HTML", "CSS", "JavaScript", "TypeScript", "C#", "Matlab"] },
+    { name: "Frameworks & Libraries", skills: ["React.js", "Django", "Flask", "FastAPI", "Express.js", "Node.js", "MongoDB", "Scikit-learn", "Firebase"] },
+    { name: "AI/ML & Domains", skills: ["Machine Learning", "Deep Learning", "Image Processing", "LangGraph", "Groq", "ChromaDB", "tree-sitter", "Data Structures & Algorithms"] },
+    { name: "Cloud & Systems", skills: ["Linux", "Azure VM", "Vercel", "WSL2"] },
     { name: "Tools", skills: ["Git", "Semgrep", "Vite", "Jest"] }
   ];
 
