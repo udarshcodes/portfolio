@@ -22,6 +22,10 @@
   --card-bg: rgba(17, 24, 39, 0.5);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -71,6 +75,29 @@ canvas {
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
+
+/* Sections */
+section {
+  padding: 6rem 0;
+  position: relative;
+  z-index: 10;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-title::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: var(--border);
+  margin-left: 1rem;
+}
 
 /* Buttons */
 .btn {
@@ -129,9 +156,60 @@ canvas {
   box-shadow: 0 0 8px var(--accent);
 }
 
+/* Chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s, border-color 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(168, 85, 247, 0.2);
+}
+.timeline-item {
+  position: relative;
+}
+.timeline-dot {
+  position: absolute;
+  left: -2.35rem;
+  top: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg-color);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
 /* Typography */
 .hero-title {
-  font-size: clamp(5rem, 15vw, 12rem);
+  font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 900;
   line-height: 0.85;
   letter-spacing: -0.05em;
@@ -139,23 +217,15 @@ canvas {
   color: var(--accent);
 }
 
-.hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
-  font-weight: 400;
-}
-
 /* Header */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent;
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
   z-index: 50;
-  padding-top: 1.5rem;
 }
 .nav-container {
   display: flex;
@@ -212,3 +282,9 @@ header {
 .flex-center { display: flex; align-items: center; justify-content: center; }
 .gap-4 { gap: 1rem; }
 .gap-6 { gap: 1.5rem; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  section { padding: 4rem 0; }
+  .card { padding: 1.5rem; }
+}

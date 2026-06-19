@@ -5,15 +5,16 @@ export default function Navbar({ theme, toggleTheme }) {
   return (
     <header>
       <div className="container nav-container">
-        <div className="logo">
+        <div className="logo" style={{ cursor: "pointer" }} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
           Udarsh Goyal.
         </div>
 
         <nav className="nav-links">
           <a href="#about">About</a>
-          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#skills">Skills</a>
+          <a href="#certifications">Certs</a>
         </nav>
 
         <div className="nav-actions">
