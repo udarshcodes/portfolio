@@ -1,5 +1,5 @@
 import { FaReact, FaPython } from "react-icons/fa";
-import { SiDjango, SiFastapi } from "react-icons/si";
+import { SiFlask, SiFastapi } from "react-icons/si";
 
 export default function About() {
   return (
@@ -26,7 +26,7 @@ export default function About() {
             I am a Computer Science undergraduate at VIT Chennai with a deep focus on AI/ML systems, agentic pipelines, and full-stack engineering. I built CodeSentinel — a fully autonomous 10-agent LangGraph system for enterprise-level code review and patching. I am currently a Summer Research Intern at IIT Ropar and a Google Student Ambassador (GID 5745), and I actively contribute to Microsoft Innovations Club, HackClub, and CYSCOM at VIT Chennai.
           </p>
           <p className="text-muted">
-            I completed the Meta Back-End Developer Professional Certificate on Coursera, covering Django, Django REST Framework, React, Advanced React, databases, and API design. I hold 13+ certifications from Oracle, Microsoft, Google, IIT Madras, and HackerRank. I compete in hackathons, experiment with open-source LLMs on Hugging Face, and help organise tech events on campus.
+            My coursework spans the Meta Back End Developer path, covering Django, Django REST Framework, React, Advanced React, databases, and API design, alongside certifications from Oracle, Microsoft, and MongoDB in AI and cloud fundamentals. Beyond coursework, I have judged hackathons, contributed to open source projects, and placed Top 10 in Nerds AI Quest, a competitive AI focused challenge.
           </p>
         </div>
 
@@ -36,8 +36,8 @@ export default function About() {
             <div className="flex-wrap gap-6 text-muted text-4xl flex-align-center">
                <FaPython title="Python" />
                <FaReact title="React" />
-               <SiDjango title="Django" />
                <SiFastapi title="FastAPI" />
+               <SiFlask title="Flask" />
                <span className="chip chip-lg">LangGraph</span>
                <span className="chip chip-lg">Groq</span>
                <span className="chip chip-lg">tree-sitter</span>
@@ -54,7 +54,7 @@ export default function About() {
                 <div className="stat-label">Projects Built</div>
               </div>
               <div className="stat-block">
-                <div className="stat-number">13+</div>
+                <div className="stat-number">28+</div>
                 <div className="stat-label">Certifications</div>
               </div>
               <div className="stat-block">
