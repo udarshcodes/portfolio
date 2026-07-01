@@ -13,17 +13,13 @@ import Footer from "./components/Footer";
 import NetworkBackground from "./components/NetworkBackground";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(isDark ? "dark" : "light");
+      return savedTheme;
     }
-  }, []);
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);

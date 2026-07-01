@@ -6,19 +6,19 @@ export default function Skills() {
     },
     {
       name: "Frontend",
-      skills: ["React.js", "Vite", "Bootstrap", "CSS Animations", "Canvas API", "Responsive Design", "Accessibility (a11y)", "React Router", "Context API"]
+      skills: ["React.js", "Next.js", "Vite", "Bootstrap", "Tailwind CSS", "CSS Animations", "Canvas API", "Responsive Design", "Accessibility (a11y)", "React Router", "Context API"]
     },
     {
       name: "Backend & APIs",
-      skills: ["Django", "Django REST Framework", "FastAPI", "Flask", "Node.js", "Express.js", "REST APIs", "JWT Auth", "WebSockets"]
+      skills: ["Django", "Django REST Framework", "FastAPI", "Flask", "Node.js", "Express.js", "REST APIs", "JWT Auth", "Session Auth", "WebSockets"]
     },
     {
       name: "Databases",
-      skills: ["MySQL", "MongoDB", "Firebase", "ChromaDB", "SQL (DDL/DML/DQL)", "Relational DB Design", "Normalization (3NF)", "Django ORM"]
+      skills: ["MySQL", "PostgreSQL", "SQLite", "MongoDB", "Firebase", "Supabase", "ChromaDB", "SQL (DDL/DML/DQL)", "Relational DB Design", "Normalization (3NF)", "Django ORM"]
     },
     {
       name: "AI / ML & Agentic Systems",
-      skills: ["Machine Learning", "Deep Learning", "LangGraph", "Groq", "tree-sitter", "ChromaDB", "Prompt Engineering", "Generative AI", "LLM Fine-tuning", "Scikit-learn", "Hugging Face"]
+      skills: ["Machine Learning", "Deep Learning", "LangGraph", "Groq", "tree-sitter", "ChromaDB", "Prompt Engineering", "Generative AI", "LLM Fine-tuning", "Scikit-learn", "Hugging Face", "OpenCV", "Qiskit"]
     },
     {
       name: "Cloud & DevOps",
