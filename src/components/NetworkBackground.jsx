@@ -61,27 +61,9 @@ export default function NetworkBackground({ theme }) {
     }
 
     let animationId;
-    let isVisible = true;
-
-    // Observe the #home section to pause animation when scrolled past
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]) {
-          isVisible = entries[0].isIntersecting;
-        }
-      },
-      { rootMargin: "0px", threshold: 0 }
-    );
-
-    setTimeout(() => {
-      const homeNode = document.getElementById("home");
-      if (homeNode) observer.observe(homeNode);
-    }, 100);
 
     const draw = () => {
       animationId = requestAnimationFrame(draw);
-
-      if (!isVisible) return; // Pause updates and drawing to save CPU
 
       ctx.clearRect(0, 0, width, height);
 
@@ -116,7 +98,6 @@ export default function NetworkBackground({ theme }) {
     return () => {
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(animationId);
-      observer.disconnect();
     };
   }, [theme]);
 
