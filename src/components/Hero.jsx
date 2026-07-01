@@ -12,7 +12,7 @@ export default function Hero() {
           Available for opportunities
         </div>
 
-        <h1 className="hero-title delay-2">
+        <h1 className="hero-title delay-2" aria-label="Udarsh Goyal">
           Udarsh<br />Goyal.
         </h1>
 
