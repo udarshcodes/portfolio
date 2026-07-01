@@ -11,7 +11,7 @@ export default function Education() {
                 B.Tech — Computer Science and Engineering
               </h3>
               <span className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-secondary)" }}>
-                2024 – 2028
+                Jul 2025 – 2029
               </span>
             </div>
             <h4 style={{ margin: "0 0 0.5rem 0", color: "var(--accent)", fontSize: "1rem", fontWeight: 500 }}>

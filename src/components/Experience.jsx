@@ -15,6 +15,16 @@ export default function Experience() {
       desc: "Officially recognised Google Student Ambassador (GID: 5745). Responsible for promoting Google developer tools, organising campus events around Google technologies, and bridging the student community with Google programs."
     },
     {
+      role: "College Ambassador",
+      org: "Techfest, IIT Bombay · Part-time",
+      date: "May 2026 – Present"
+    },
+    {
+      role: "Campus Mantri",
+      org: "GeeksforGeeks · Part-time",
+      date: "Jun 2026 – Present"
+    },
+    {
       role: "Web Development and AI/ML Contributor",
       org: "Microsoft Innovations Club VITC · Part-time",
       date: "Oct 2025 – Present",
@@ -27,6 +37,11 @@ export default function Experience() {
       date: "Sep 2025 – Present",
       location: "Chennai, Tamil Nadu, India · On-site",
       desc: "Building full-stack projects and AI-powered tools as part of HackClub's active developer community. Volunteered and received appreciation for contributions to the Zerodha Varsity Quiz Chennai Edition 2025 event."
+    },
+    {
+      role: "Student Partner",
+      org: "Internshala · Part-time",
+      date: "Jun 2026 – Present"
     },
     {
       role: "Technical Team Member",

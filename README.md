@@ -40,11 +40,11 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/udarshcodes/personal_portfolio.git
+   git clone https://github.com/udarshcodes/portfolio.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd personal_portfolio
+   cd portfolio
    ```
 3. Install dependencies:
    ```bash
