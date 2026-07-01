@@ -20,7 +20,7 @@ This is my personal portfolio built to serve as a central hub for my skills, edu
 - **Tiered Projects Portfolio:** A structured three-tier architecture (Featured, Foundational, Labs) showcasing full-stack, AI, and hardware integrations.
 - **Detailed Timelines:** Scroll through an academic and professional timeline detailing coursework, research internships, and core committee roles.
 - **Categorized Skills:** Browse a grid of technical skills structured by domain (AI/ML, Frontend, Backend, Cloud).
-- **Achievements & Certifications:** View over 28 verified credentials from industry leaders like Meta, MongoDB, Oracle, Harvard, and Microsoft, complete with dynamically fetched company logos and direct verification links.
+- **Achievements & Certifications:** View 28 verified credentials from industry leaders like Meta, MongoDB, Oracle, Harvard, and Microsoft, complete with dynamically fetched company logos and direct verification links.
 - **SEO & Mobile Optimized:** Fully responsive design featuring a stateful mobile hamburger menu, comprehensive Open Graph metadata, and search engine crawler configurations (sitemap and robots.txt).
 
 ## Tech Stack
@@ -61,7 +61,9 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 
 ```text
 ├── public/
+│   ├── images/
 │   ├── favicon.svg
+│   ├── google3595f4ed3bbcac12.html
 │   ├── og-image.jpg
 │   ├── robots.txt
 │   └── sitemap.xml

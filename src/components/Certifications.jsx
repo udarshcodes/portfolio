@@ -16,17 +16,17 @@ export default function Certifications() {
     },
     {
       title: "Harvard CS50x",
-      org: "Harvard University (via edX)",
+      org: "Harvard University",
       logoDomain: "harvard.edu",
       link: "https://certificates.cs50.io/03151a38-8bcc-4fad-a62d-be78d665636f.pdf?size=letter",
-      note: ""
+      note: "Jun 2025"
     },
     {
       title: "Harvard CS50P",
-      org: "Harvard University (via edX)",
+      org: "Harvard University",
       logoDomain: "harvard.edu",
       link: "https://certificates.cs50.io/9e4da3bf-acdf-4c38-b286-2fa2353507ef.pdf?size=letter",
-      note: ""
+      note: "Jul 2025"
     },
     {
       title: "Azure Fundamentals (AI-900 track)",
@@ -36,96 +36,96 @@ export default function Certifications() {
       note: "2025"
     },
     {
-      title: "McKinsey Forward Program, Core Skills Badge",
+      title: "McKinsey Forward Program",
       org: "McKinsey & Company",
       logoDomain: null,
       logoUrl: "https://github.com/mckinsey.png",
       link: "https://www.credly.com/badges/1e4a2d88-179b-48ab-bb50-8eb6d796ba76/public_url",
-      note: ""
+      note: "Jun 2026"
     },
     {
       title: "Building AI-Powered Search with MongoDB Vector Search",
       org: "MongoDB",
       logoDomain: "mongodb.com",
       link: "https://www.credly.com/badges/d27f3baf-b445-4e01-8903-436e2099b595/public_url",
-      note: "Jun 2024"
+      note: "Jun 2026"
     },
     {
       title: "Building RAG Apps Using MongoDB",
       org: "MongoDB",
       logoDomain: "mongodb.com",
       link: "https://www.credly.com/badges/776ab8a2-39b0-4711-91e6-f9fc47afe080/public_url",
-      note: "Jun 2024"
+      note: "Jun 2026"
     },
     {
       title: "MongoDB Overview: Core Concepts and Architecture",
       org: "MongoDB",
       logoDomain: "mongodb.com",
       link: "https://www.credly.com/badges/4a0b732e-73bb-46a7-9391-5c8b63396cd8/public_url",
-      note: "Jun 2024"
+      note: "Jun 2026"
     },
     {
       title: "Advanced React",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/UG3TO1ER83AM",
-      note: "May 2024"
+      note: "May 2026"
     },
     {
       title: "Django Web Framework",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/NYAIQQPO88W5",
-      note: "Jun 2024"
+      note: "Jun 2026"
     },
     {
       title: "APIs",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/XMN6KMWKYRSU",
-      note: "Jun 2024"
+      note: "Jun 2026"
     },
     {
       title: "Introduction to Databases for Back-End Development",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/OWLWR18DV9J1",
-      note: "Jun 2024"
+      note: "Jun 2026"
     },
     {
       title: "React Basics",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/LU96Z6VFB3DE",
-      note: "May 2024"
+      note: "May 2026"
     },
     {
       title: "Programming with JavaScript",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/9V0WSO3W992X",
-      note: "May 2024"
+      note: "May 2026"
     },
     {
       title: "Version Control",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/XAEXZPCRPUXV",
-      note: "May 2024"
+      note: "May 2026"
     },
     {
       title: "HTML and CSS in depth",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/9140OX4LBUG1",
-      note: "May 2024"
+      note: "May 2026"
     },
     {
       title: "Introduction to Front-End Development",
       org: "Meta",
       logoDomain: "meta.com",
       link: "https://www.coursera.org/account/accomplishments/verify/CXKD6K9X7ZZD",
-      note: "May 2024"
+      note: "May 2026"
     },
     {
       title: "C# Classes, Properties & Methods",
@@ -197,7 +197,7 @@ export default function Certifications() {
       logoDomain: null,
       logoUrl: "https://github.com/Devtown-India.png",
       link: "https://drive.google.com/file/d/1lAfkY-jLC2bUdENxUlS2-TKiBbFcKNwO/view?usp=sharing",
-      note: "2025"
+      note: "Oct 2025"
     }
   ];
 
