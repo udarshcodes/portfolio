@@ -33,15 +33,15 @@ export default function Skills() {
   return (
     <section id="skills" className="container">
       <h2 className="section-title">Skills</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "2rem" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem", alignItems: "start" }}>
         {categories.map((cat, idx) => (
           <div key={idx} className="card" style={{ padding: "1.5rem" }}>
-            <h3 style={{ color: "var(--accent)", margin: "0 0 1.5rem 0", fontSize: "1.2rem", borderBottom: "1px solid var(--border)", paddingBottom: "0.5rem" }}>
+            <h3 style={{ color: "var(--accent)", margin: "0 0 1.2rem 0", fontSize: "1.1rem", borderBottom: "1px solid var(--border)", paddingBottom: "0.5rem" }}>
               {cat.name}
             </h3>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
               {cat.skills.map((skill, sIdx) => (
-                <span key={sIdx} className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-primary)" }}>
+                <span key={sIdx} className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-primary)", padding: "0.25rem 0.6rem", fontSize: "0.75rem" }}>
                   {skill}
                 </span>
               ))}
