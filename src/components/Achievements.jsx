@@ -1,40 +1,28 @@
 export default function Achievements() {
   const achievements = [
     {
+      title: "Selected — Google Student Ambassador (GID 5745)",
+      org: "Google",
+      date: "April 2026",
+      desc: "Officially selected and recognised as a Google Student Ambassador — a program reserved for student leaders who represent Google technologies and programs on campus."
+    },
+    {
+      title: "Selected — Summer Research Internship",
+      org: "IIT Ropar",
+      date: "May 2026",
+      desc: "Selected for a research internship at one of India's premier IITs, working on applied AI and machine learning projects under faculty guidance."
+    },
+    {
       title: "Top 10 — Nerds AI Quest 2.0",
       org: "Nerds AI Quest",
       date: "January 2026",
       desc: "Placed in the Top 10 out of a large competitive field in an AI-focused challenge that tested applied machine learning, prompt engineering, and problem-solving skills."
     },
     {
-      title: "Google Student Ambassador",
-      org: "Google",
-      date: "April 2026",
-      desc: "Officially selected and recognised as a Google Student Ambassador (GID: 5745) — a program reserved for student leaders who represent Google technologies and programs on campus."
-    },
-    {
-      title: "Summer Research Internship — IIT Ropar",
-      org: "IIT Ropar",
-      date: "May 2026",
-      desc: "Selected for a research internship at one of India's premier IITs, working on applied AI and machine learning projects under faculty guidance."
-    },
-    {
-      title: "Oracle Cloud Infrastructure 2025 AI Foundations Associate",
-      org: "Oracle",
-      date: "October 2025 (valid till Oct 2027)",
-      desc: "Industry-recognised certification validating foundational knowledge of AI and machine learning concepts on Oracle Cloud Infrastructure."
-    },
-    {
-      title: "Oracle Cloud Infrastructure 2025 Generative AI Professional",
-      org: "Oracle",
-      date: "October 2025 (valid till Oct 2027)",
-      desc: "Professional-level certification from Oracle validating expertise in Generative AI concepts, large language models, and OCI AI services."
-    },
-    {
-      title: "IIT Madras Shaastra — Building and Experimenting with LLMs Workshop",
-      org: "IIT Madras",
-      date: "January 2026",
-      desc: "Completed a hands-on workshop at IIT Madras Shaastra covering LLM architecture, fine-tuning techniques, prompt engineering, and practical experimentation with open-source models."
+      title: "Open Source Contributor — 8 Merged Pull Requests",
+      org: "Open Source",
+      date: "Ongoing",
+      desc: "Contributed to vicharanashala/cs9, HackclubVIT/hc-main-website, SugeethJSA/cyscom-finalised-upgraded-website, and Gowreesh-VT/FFCS-Timetable. Shipped UI overhauls, admin portal features, and performance fixes across four active repositories, spanning React, Next.js, and full stack feature work."
     }
   ];
 

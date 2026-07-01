@@ -93,6 +93,27 @@ export default function Certifications() {
       badge: null,
       file: "/pdf/DEVTOWN.pdf",
       note: "2025"
+    },
+    {
+      title: "McKinsey Forward Program, Core Skills Badge",
+      org: "McKinsey & Company",
+      badge: null,
+      file: null,
+      note: ""
+    },
+    {
+      title: "Harvard CS50x",
+      org: "Harvard University (via edX)",
+      badge: null,
+      file: null,
+      note: ""
+    },
+    {
+      title: "Harvard CS50P",
+      org: "Harvard University (via edX)",
+      badge: null,
+      file: null,
+      note: ""
     }
   ];
 

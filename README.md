@@ -17,6 +17,7 @@ This is my personal portfolio built to serve as a central hub for my skills, edu
 - **Premium Glassmorphism UI:** Semi-transparent frosted-glass cards with subtle highlights and responsive drop shadows.
 - **Dynamic Theming:** Toggle between dark and light themes using the navigation bar.
 - **Interactive Background:** A network particle effect rendered on an HTML5 canvas that adapts to the active theme, with reduced-motion support for accessibility.
+- **Tiered Projects Portfolio:** A structured three-tier architecture (Featured, Foundational, Labs) showcasing full-stack, AI, and hardware integrations.
 - **Detailed Timelines:** Scroll through an academic and professional timeline detailing coursework, research internships, and core committee roles.
 - **Categorized Skills:** Browse a grid of technical skills structured by domain (AI/ML, Frontend, Backend, Cloud).
 - **Achievements & Certifications:** View major milestones, including the Nerds AI Quest Top 10 finish and Oracle/Microsoft certifications.
