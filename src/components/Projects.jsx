@@ -77,41 +77,41 @@ export default function Projects() {
         <div className="badge-pill" style={{ marginBottom: "1.5rem" }}>
           <span className="badge-dot"></span> Flagship Project
         </div>
-        <h3 style={{ fontSize: "2.2rem", color: "var(--accent)", margin: "0 0 1rem 0" }}>CodeSentinel</h3>
-        <p style={{ color: "var(--text-secondary)", fontSize: "1.1rem", lineHeight: "1.6", marginBottom: "1.5rem", maxWidth: "800px" }}>
+        <h3 className="card-header" style={{ fontSize: "2.2rem" }}>CodeSentinel</h3>
+        <p className="text-muted" style={{ fontSize: "1.1rem", marginBottom: "1.5rem", maxWidth: "800px" }}>
           A massive 10-agent LangGraph pipeline designed to autonomously audit, refactor, and deploy enterprise-level codebases. This system differentiates between syntax errors and logical flaws using deep semantic searching.
         </p>
-        <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
+        <div className="flex-wrap gap-3" style={{ marginBottom: "2.5rem" }}>
           <span className="chip">Python</span>
           <span className="chip">LangGraph</span>
           <span className="chip">Groq</span>
           <span className="chip">ChromaDB</span>
           <span className="chip">tree-sitter</span>
         </div>
-        <div style={{ display: "flex", gap: "1rem" }}>
+        <div className="flex-wrap gap-4">
           <a href="#" className="btn btn-primary" style={{ padding: "0.7rem 1.5rem" }}><FaExternalLinkAlt style={{ marginRight: "0.5rem" }}/> Live Demo</a>
           <a href="https://github.com/udarshcodes/CodeSentinel" className="btn btn-outline" style={{ padding: "0.7rem 1.5rem" }}><FaGithub style={{ marginRight: "0.5rem" }}/> GitHub</a>
         </div>
       </div>
 
       {/* Featured Projects Tier */}
-      <h3 style={{ fontSize: "1.8rem", color: "var(--text-primary)", marginTop: "4rem", marginBottom: "2rem" }}>Featured Work</h3>
-      <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
+      <h3 className="section-subtitle">Featured Work</h3>
+      <div className="flex-col gap-12">
         {featuredProjects.map((proj, idx) => (
-          <div key={idx} className="card" style={{ display: "flex", flexDirection: "column", padding: "2.5rem" }}>
-            <h3 style={{ fontSize: "2rem", color: "var(--accent)", margin: "0 0 1rem 0" }}>{proj.title}</h3>
-            <p style={{ color: "var(--text-secondary)", fontSize: "1.1rem", lineHeight: "1.6", marginBottom: "1.5rem" }}>{proj.hook}</p>
-            <ul style={{ color: "var(--text-secondary)", lineHeight: "1.6", marginBottom: "2rem", paddingLeft: "1.2rem" }}>
+          <div key={idx} className="card flex-col" style={{ padding: "2.5rem" }}>
+            <h3 className="card-header">{proj.title}</h3>
+            <p className="text-muted" style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}>{proj.hook}</p>
+            <ul className="text-muted" style={{ marginBottom: "2rem", paddingLeft: "1.2rem" }}>
               {proj.bullets.map((bullet, bIdx) => (
                 <li key={bIdx} style={{ marginBottom: "0.5rem" }}>{bullet}</li>
               ))}
             </ul>
-            <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap", marginBottom: "2.5rem" }}>
+            <div className="flex-wrap gap-3" style={{ marginBottom: "2.5rem" }}>
               {proj.tags.map((tag, tIdx) => (
                 <span key={tIdx} className="chip">{tag}</span>
               ))}
             </div>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div className="flex-wrap gap-4">
               {proj.demo && (
                 <a href={proj.demo} className="btn btn-primary" style={{ padding: "0.7rem 1.5rem" }}><FaExternalLinkAlt style={{ marginRight: "0.5rem" }}/> Live Demo</a>
               )}
@@ -122,25 +122,25 @@ export default function Projects() {
       </div>
 
       {/* Foundational Projects Tier */}
-      <h3 style={{ fontSize: "1.8rem", color: "var(--text-primary)", marginTop: "4rem", marginBottom: "2rem" }}>Foundational Projects</h3>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "2rem" }}>
+      <h3 className="section-subtitle">Foundational Projects</h3>
+      <div className="grid-350 gap-8">
         {foundationalProjects.map((proj, idx) => (
-          <div key={idx} className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "2rem" }}>
+          <div key={idx} className="card flex-col" style={{ justifyContent: "space-between", padding: "2rem" }}>
             <div>
-              <h3 style={{ fontSize: "1.5rem", color: "var(--text-primary)", margin: "0 0 1rem 0" }}>{proj.title}</h3>
-              <p style={{ color: "var(--text-secondary)", lineHeight: "1.6", marginBottom: "1.5rem" }}>{proj.hook}</p>
-              <ul style={{ color: "var(--text-secondary)", lineHeight: "1.6", marginBottom: "2rem", paddingLeft: "1.2rem" }}>
+              <h3 className="card-header-sm">{proj.title}</h3>
+              <p className="text-muted" style={{ marginBottom: "1.5rem" }}>{proj.hook}</p>
+              <ul className="text-muted" style={{ marginBottom: "2rem", paddingLeft: "1.2rem" }}>
                 {proj.bullets.map((bullet, bIdx) => (
                   <li key={bIdx} style={{ marginBottom: "0.5rem" }}>{bullet}</li>
                 ))}
               </ul>
-              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "2rem" }}>
+              <div className="flex-wrap gap-2" style={{ marginBottom: "2rem" }}>
                 {proj.tags.map((tag, tIdx) => (
                   <span key={tIdx} className="chip">{tag}</span>
                 ))}
               </div>
             </div>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div className="flex-wrap gap-4">
               <a href={proj.github} className="icon-btn" title="GitHub"><FaGithub /></a>
               {proj.demo && (
                 <a href={proj.demo} className="icon-btn" title="Live Demo"><FaExternalLinkAlt /></a>
@@ -151,20 +151,20 @@ export default function Projects() {
       </div>
 
       {/* Labs Projects Tier */}
-      <h3 style={{ fontSize: "1.8rem", color: "var(--text-primary)", marginTop: "4rem", marginBottom: "2rem" }}>Labs and Explorations</h3>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
+      <h3 className="section-subtitle">Labs and Explorations</h3>
+      <div className="grid-300 gap-6">
         {labsProjects.map((proj, idx) => (
-          <div key={idx} className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "1.5rem" }}>
+          <div key={idx} className="card flex-col" style={{ justifyContent: "space-between", padding: "1.5rem" }}>
             <div>
-              <h4 style={{ fontSize: "1.2rem", color: "var(--text-primary)", margin: "0 0 0.8rem 0" }}>{proj.title}</h4>
-              <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.5", marginBottom: "1.5rem" }}>{proj.hook}</p>
-              <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+              <h4 className="card-header-xs">{proj.title}</h4>
+              <p className="text-muted-sm" style={{ marginBottom: "1.5rem" }}>{proj.hook}</p>
+              <div className="flex-wrap gap-2" style={{ marginBottom: "1.5rem" }}>
                 {proj.tags.map((tag, tIdx) => (
                   <span key={tIdx} className="chip" style={{ fontSize: "0.65rem", padding: "0.2rem 0.6rem" }}>{tag}</span>
                 ))}
               </div>
             </div>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div className="flex-wrap gap-4">
               <a href={proj.github} className="icon-btn" style={{ width: "2rem", height: "2rem" }} title="GitHub"><FaGithub /></a>
             </div>
           </div>

@@ -204,31 +204,29 @@ export default function Certifications() {
   return (
     <section id="certifications" className="container">
       <h2 className="section-title">Certifications</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+      <div className="grid-280 gap-6">
         {certs.map((cert, idx) => {
           const Wrapper = cert.link ? "a" : "div";
           const href = cert.link;
           return (
-            <Wrapper key={idx} href={href} target={href ? "_blank" : undefined} rel={href ? "noreferrer" : undefined} className="card" style={{ padding: "1.5rem", display: "flex", alignItems: "center", gap: "1.5rem", textDecoration: "none" }}>
+            <Wrapper key={idx} href={href} target={href ? "_blank" : undefined} rel={href ? "noreferrer" : undefined} className="card flex-align-center gap-6" style={{ padding: "1.5rem", textDecoration: "none" }}>
               {cert.logoUrl ? (
-                 <div style={{ minWidth: "50px", height: "50px", borderRadius: "12px", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", padding: "6px" }}>
+                 <div className="flex-center" style={{ minWidth: "50px", height: "50px", borderRadius: "12px", background: "#fff", overflow: "hidden", padding: "6px" }}>
                    <img src={cert.logoUrl} alt={cert.org} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                  </div>
               ) : cert.logoDomain ? (
-                 <div style={{ minWidth: "50px", height: "50px", borderRadius: "12px", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", padding: "6px" }}>
+                 <div className="flex-center" style={{ minWidth: "50px", height: "50px", borderRadius: "12px", background: "#fff", overflow: "hidden", padding: "6px" }}>
                    <img src={`https://www.google.com/s2/favicons?domain=${cert.logoDomain}&sz=128`} alt={cert.org} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                  </div>
               ) : (
-                 <div style={{ minWidth: "50px", height: "50px", borderRadius: "50%", background: "rgba(168, 85, 247, 0.1)", border: "1px solid rgba(168, 85, 247, 0.3)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--accent)", fontSize: "1.5rem", fontWeight: 800 }}>
+                 <div className="flex-center" style={{ minWidth: "50px", height: "50px", borderRadius: "50%", background: "rgba(168, 85, 247, 0.1)", border: "1px solid rgba(168, 85, 247, 0.3)", color: "var(--accent)", fontSize: "1.5rem", fontWeight: 800 }}>
                    {cert.org.charAt(0)}
                  </div>
               )}
-              <div>
+              <div className="flex-col" style={{ gap: "0.2rem" }}>
                 <h4 style={{ margin: "0 0 0.25rem 0", color: "var(--text-primary)", fontSize: "0.95rem" }}>{cert.title}</h4>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}>
-                  <span style={{ color: "var(--text-secondary)", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 600 }}>{cert.org}</span>
-                  {cert.note && <span style={{ color: "var(--text-secondary)", fontSize: "0.75rem" }}>{cert.note}</span>}
-                </div>
+                <span style={{ color: "var(--text-secondary)", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 600 }}>{cert.org}</span>
+                {cert.note && <span style={{ color: "var(--text-secondary)", fontSize: "0.75rem" }}>{cert.note}</span>}
               </div>
             </Wrapper>
           );

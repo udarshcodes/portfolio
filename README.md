@@ -4,9 +4,9 @@ A personal portfolio website showcasing web development, AI, and cloud projects.
 
 ## Live Demo
 
-**[View the Live Portfolio Here](https://udarshcodes.github.io/portfolio/)**
+**[View the Live Portfolio Here](https://udarshgoyal.onrender.com/)**
 
-Hosted via GitHub Pages.
+Hosted via Render.
 
 ## About
 
@@ -20,7 +20,8 @@ This is my personal portfolio built to serve as a central hub for my skills, edu
 - **Tiered Projects Portfolio:** A structured three-tier architecture (Featured, Foundational, Labs) showcasing full-stack, AI, and hardware integrations.
 - **Detailed Timelines:** Scroll through an academic and professional timeline detailing coursework, research internships, and core committee roles.
 - **Categorized Skills:** Browse a grid of technical skills structured by domain (AI/ML, Frontend, Backend, Cloud).
-- **Achievements & Certifications:** View major milestones, including the Nerds AI Quest Top 10 finish and Oracle/Microsoft certifications.
+- **Achievements & Certifications:** View over 28 verified credentials from industry leaders like Meta, MongoDB, Oracle, Harvard, and Microsoft, complete with dynamically fetched company logos and direct verification links.
+- **SEO & Mobile Optimized:** Fully responsive design featuring a stateful mobile hamburger menu, comprehensive Open Graph metadata, and search engine crawler configurations (sitemap and robots.txt).
 
 ## Tech Stack
 
@@ -60,8 +61,10 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 
 ```text
 ├── public/
-│   ├── images/
-│   └── pdf/
+│   ├── favicon.svg
+│   ├── og-image.jpg
+│   ├── robots.txt
+│   └── sitemap.xml
 ├── src/
 │   ├── components/
 │   │   ├── About.jsx
@@ -90,4 +93,5 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 - **Custom Canvas Background:** Implemented the particle network effect natively using the HTML5 Canvas API instead of relying on heavy third-party libraries, keeping the bundle size small.
 - **Accessibility:** Incorporated `@media (prefers-reduced-motion: reduce)` to gracefully disable animations and canvas effects for users with sensitivity to motion.
 - **CSS Variables for Theming:** Used native CSS custom properties defined on the root element to handle dark and light modes, avoiding the need for CSS-in-JS libraries.
+- **Dynamic Asset Integration:** Replaced heavy local static assets (images and PDFs) with direct integrations to verification platforms (Credly, Coursera), and dynamically fetched company logos via the Google Favicon API and GitHub organization avatars for robust, lightweight presentation.
 

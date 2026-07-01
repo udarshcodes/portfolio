@@ -29,15 +29,15 @@ export default function Achievements() {
   return (
     <section id="achievements" className="container">
       <h2 className="section-title">Achievements</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
+      <div className="grid-320 gap-8">
         {achievements.map((item, idx) => (
           <div key={idx} className="card" style={{ padding: "2rem" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
+            <div className="flex-between flex-wrap gap-2 align-start" style={{ marginBottom: "0.75rem" }}>
               <h3 style={{ margin: 0, fontSize: "1.05rem", color: "var(--text-primary)", lineHeight: 1.4 }}>{item.title}</h3>
               <span className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-secondary)", whiteSpace: "nowrap" }}>{item.date}</span>
             </div>
             <div style={{ color: "var(--accent)", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.org}</div>
-            <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.7", margin: 0 }}>{item.desc}</p>
+            <p className="text-muted-sm" style={{ margin: 0 }}>{item.desc}</p>
           </div>
         ))}
       </div>

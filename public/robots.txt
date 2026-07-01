@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://udarshcodes.github.io/portfolio/sitemap.xml

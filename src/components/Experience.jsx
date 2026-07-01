@@ -60,14 +60,14 @@ export default function Experience() {
           {experiences.map((exp, idx) => (
             <div key={idx} className="timeline-item">
               <div className="timeline-dot"></div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", marginBottom: "0.5rem", gap: "1rem" }}>
-                <h3 style={{ margin: 0, fontSize: "1.2rem", color: "var(--text-primary)" }}>{exp.role}</h3>
+              <div className="flex-wrap flex-between gap-4" style={{ alignItems: "flex-start", marginBottom: "0.5rem" }}>
+                <h3 className="card-header-xs" style={{ margin: 0 }}>{exp.role}</h3>
                 <span className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-secondary)" }}>{exp.date}</span>
               </div>
               <h4 style={{ margin: "0 0 0.5rem 0", color: "var(--accent)", fontSize: "1rem", fontWeight: 500 }}>{exp.org}</h4>
-              <div style={{ color: "var(--text-secondary)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>{exp.location}</div>
+              <div className="text-muted-sm" style={{ marginBottom: "0.5rem" }}>{exp.location}</div>
               {exp.desc && (
-                <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.7", margin: "0.5rem 0 0 0" }}>
+                <p className="text-muted-sm" style={{ margin: "0.5rem 0 0 0" }}>
                   {exp.desc}
                 </p>
               )}
