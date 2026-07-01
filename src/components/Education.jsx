@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <section id="education" className="container">
+    <section id="education" className="container reveal">
       <h2 className="section-title">Education</h2>
       <div className="card" style={{ maxWidth: "800px", margin: "0 auto" }}>
         <div className="timeline">

@@ -31,7 +31,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="container">
+    <section id="skills" className="container reveal">
       <h2 className="section-title">Skills</h2>
       <div className="grid-320 gap-6 align-start">
         {categories.map((cat, idx) => (

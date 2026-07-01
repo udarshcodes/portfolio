@@ -3,16 +3,18 @@ import { SiDjango, SiFastapi } from "react-icons/si";
 
 export default function About() {
   return (
-    <section id="about" className="container">
+    <section id="about" className="container reveal">
       <h2 className="section-title">About Me</h2>
       
       <div className="grid-300 gap-12">
         <div className="card">
-          <div className="flex-wrap gap-6" style={{ alignItems: "center", marginBottom: "1.5rem" }}>
+          <div className="flex-wrap gap-6 flex-align-center mb-6">
             <img 
               src="/images/udarsh.jpg" 
               alt="Udarsh Goyal" 
-              style={{ width: "100px", height: "100px", borderRadius: "50%", objectFit: "cover", border: "2px solid var(--accent)", boxShadow: "0 0 15px rgba(168, 85, 247, 0.2)" }} 
+              className="avatar"
+              width="100"
+              height="100"
             />
             <div className="flex-wrap gap-4">
               <span className="badge-pill"><span className="badge-dot"></span> Summer Research Intern @ IIT Ropar</span>
@@ -20,7 +22,7 @@ export default function About() {
             </div>
           </div>
           
-          <p className="text-muted" style={{ marginBottom: "1.5rem" }}>
+          <p className="text-muted mb-6">
             I am a Computer Science undergraduate at VIT Chennai with a deep focus on AI/ML systems, agentic pipelines, and full-stack engineering. I built CodeSentinel — a fully autonomous 10-agent LangGraph system for enterprise-level code review and patching. I am currently a Summer Research Intern at IIT Ropar and a Google Student Ambassador (GID 5745), and I actively contribute to Microsoft Innovations Club, HackClub, and CYSCOM at VIT Chennai.
           </p>
           <p className="text-muted">
@@ -28,17 +30,17 @@ export default function About() {
           </p>
         </div>
 
-        <div className="card flex-col" style={{ justifyContent: "space-between" }}>
+        <div className="card flex-col flex-between">
           <div>
             <h3 className="card-header-sm">Core Technologies</h3>
-            <div className="flex-wrap gap-6 text-muted" style={{ fontSize: "2.5rem", alignItems: "center" }}>
+            <div className="flex-wrap gap-6 text-muted text-4xl flex-align-center">
                <FaPython title="Python" />
                <FaReact title="React" />
                <SiDjango title="Django" />
                <SiFastapi title="FastAPI" />
-               <span className="chip" style={{ fontSize: "1rem", padding: "0.5rem 1rem" }}>LangGraph</span>
-               <span className="chip" style={{ fontSize: "1rem", padding: "0.5rem 1rem" }}>Groq</span>
-               <span className="chip" style={{ fontSize: "1rem", padding: "0.5rem 1rem" }}>tree-sitter</span>
+               <span className="chip chip-lg">LangGraph</span>
+               <span className="chip chip-lg">Groq</span>
+               <span className="chip chip-lg">tree-sitter</span>
             </div>
           </div>
           <div className="stat-container">

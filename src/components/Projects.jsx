@@ -69,19 +69,19 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="container">
+    <section id="projects" className="container reveal">
       <h2 className="section-title">Projects</h2>
       
       {/* Featured Banner: CodeSentinel */}
-      <div className="card" style={{ marginBottom: "3rem", border: "2px solid rgba(168, 85, 247, 0.5)", background: "linear-gradient(to bottom right, var(--card-bg), rgba(168, 85, 247, 0.05))" }}>
-        <div className="badge-pill" style={{ marginBottom: "1.5rem" }}>
+      <div className="card card-flagship mb-12">
+        <div className="badge-pill mb-6">
           <span className="badge-dot"></span> Flagship Project
         </div>
-        <h3 className="card-header" style={{ fontSize: "2.2rem" }}>CodeSentinel</h3>
-        <p className="text-muted" style={{ fontSize: "1.1rem", marginBottom: "1.5rem", maxWidth: "800px" }}>
+        <h3 className="card-header card-header-lg">CodeSentinel</h3>
+        <p className="text-muted text-lg mb-6 max-w-800">
           A massive 10-agent LangGraph pipeline designed to autonomously audit, refactor, and deploy enterprise-level codebases. This system differentiates between syntax errors and logical flaws using deep semantic searching.
         </p>
-        <div className="flex-wrap gap-3" style={{ marginBottom: "2.5rem" }}>
+        <div className="flex-wrap gap-3 mb-10">
           <span className="chip">Python</span>
           <span className="chip">LangGraph</span>
           <span className="chip">Groq</span>
@@ -89,8 +89,8 @@ export default function Projects() {
           <span className="chip">tree-sitter</span>
         </div>
         <div className="flex-wrap gap-4">
-          <a href="#" className="btn btn-primary" style={{ padding: "0.7rem 1.5rem" }}><FaExternalLinkAlt style={{ marginRight: "0.5rem" }}/> Live Demo</a>
-          <a href="https://github.com/udarshcodes/CodeSentinel" className="btn btn-outline" style={{ padding: "0.7rem 1.5rem" }}><FaGithub style={{ marginRight: "0.5rem" }}/> GitHub</a>
+          <a href="#" className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
+          <a href="https://github.com/udarshcodes/CodeSentinel" className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
         </div>
       </div>
 
@@ -98,24 +98,24 @@ export default function Projects() {
       <h3 className="section-subtitle">Featured Work</h3>
       <div className="flex-col gap-12">
         {featuredProjects.map((proj, idx) => (
-          <div key={idx} className="card flex-col" style={{ padding: "2.5rem" }}>
+          <div key={idx} className="card flex-col p-10">
             <h3 className="card-header">{proj.title}</h3>
-            <p className="text-muted" style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}>{proj.hook}</p>
-            <ul className="text-muted" style={{ marginBottom: "2rem", paddingLeft: "1.2rem" }}>
+            <p className="text-muted text-lg mb-6">{proj.hook}</p>
+            <ul className="text-muted mb-8 pl-5">
               {proj.bullets.map((bullet, bIdx) => (
-                <li key={bIdx} style={{ marginBottom: "0.5rem" }}>{bullet}</li>
+                <li key={bIdx} className="mb-2">{bullet}</li>
               ))}
             </ul>
-            <div className="flex-wrap gap-3" style={{ marginBottom: "2.5rem" }}>
+            <div className="flex-wrap gap-3 mb-10">
               {proj.tags.map((tag, tIdx) => (
                 <span key={tIdx} className="chip">{tag}</span>
               ))}
             </div>
             <div className="flex-wrap gap-4">
               {proj.demo && (
-                <a href={proj.demo} className="btn btn-primary" style={{ padding: "0.7rem 1.5rem" }}><FaExternalLinkAlt style={{ marginRight: "0.5rem" }}/> Live Demo</a>
+                <a href={proj.demo} className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
               )}
-              <a href={proj.github} className="btn btn-outline" style={{ padding: "0.7rem 1.5rem" }}><FaGithub style={{ marginRight: "0.5rem" }}/> GitHub</a>
+              <a href={proj.github} className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
             </div>
           </div>
         ))}
@@ -125,25 +125,25 @@ export default function Projects() {
       <h3 className="section-subtitle">Foundational Projects</h3>
       <div className="grid-350 gap-8">
         {foundationalProjects.map((proj, idx) => (
-          <div key={idx} className="card flex-col" style={{ justifyContent: "space-between", padding: "2rem" }}>
+          <div key={idx} className="card flex-col flex-between p-8">
             <div>
               <h3 className="card-header-sm">{proj.title}</h3>
-              <p className="text-muted" style={{ marginBottom: "1.5rem" }}>{proj.hook}</p>
-              <ul className="text-muted" style={{ marginBottom: "2rem", paddingLeft: "1.2rem" }}>
+              <p className="text-muted mb-6">{proj.hook}</p>
+              <ul className="text-muted mb-8 pl-5">
                 {proj.bullets.map((bullet, bIdx) => (
-                  <li key={bIdx} style={{ marginBottom: "0.5rem" }}>{bullet}</li>
+                  <li key={bIdx} className="mb-2">{bullet}</li>
                 ))}
               </ul>
-              <div className="flex-wrap gap-2" style={{ marginBottom: "2rem" }}>
+              <div className="flex-wrap gap-2 mb-8">
                 {proj.tags.map((tag, tIdx) => (
                   <span key={tIdx} className="chip">{tag}</span>
                 ))}
               </div>
             </div>
             <div className="flex-wrap gap-4">
-              <a href={proj.github} className="icon-btn" title="GitHub"><FaGithub /></a>
+              <a href={proj.github} className="icon-btn" title="GitHub" aria-label={`GitHub Repository for ${proj.title}`}><FaGithub /></a>
               {proj.demo && (
-                <a href={proj.demo} className="icon-btn" title="Live Demo"><FaExternalLinkAlt /></a>
+                <a href={proj.demo} className="icon-btn" title="Live Demo" aria-label={`Live Demo for ${proj.title}`}><FaExternalLinkAlt /></a>
               )}
             </div>
           </div>
@@ -154,18 +154,18 @@ export default function Projects() {
       <h3 className="section-subtitle">Labs and Explorations</h3>
       <div className="grid-300 gap-6">
         {labsProjects.map((proj, idx) => (
-          <div key={idx} className="card flex-col" style={{ justifyContent: "space-between", padding: "1.5rem" }}>
+          <div key={idx} className="card flex-col flex-between p-6">
             <div>
               <h4 className="card-header-xs">{proj.title}</h4>
-              <p className="text-muted-sm" style={{ marginBottom: "1.5rem" }}>{proj.hook}</p>
-              <div className="flex-wrap gap-2" style={{ marginBottom: "1.5rem" }}>
+              <p className="text-muted-sm mb-6">{proj.hook}</p>
+              <div className="flex-wrap gap-2 mb-6">
                 {proj.tags.map((tag, tIdx) => (
-                  <span key={tIdx} className="chip" style={{ fontSize: "0.65rem", padding: "0.2rem 0.6rem" }}>{tag}</span>
+                  <span key={tIdx} className="chip chip-sm">{tag}</span>
                 ))}
               </div>
             </div>
             <div className="flex-wrap gap-4">
-              <a href={proj.github} className="icon-btn" style={{ width: "2rem", height: "2rem" }} title="GitHub"><FaGithub /></a>
+              <a href={proj.github} className="icon-btn icon-btn-sm" title="GitHub" aria-label={`GitHub Repository for ${proj.title}`}><FaGithub /></a>
             </div>
           </div>
         ))}

@@ -202,7 +202,7 @@ export default function Certifications() {
   ];
 
   return (
-    <section id="certifications" className="container">
+    <section id="certifications" className="container reveal">
       <h2 className="section-title">Certifications</h2>
       <div className="grid-280 gap-6">
         {certs.map((cert, idx) => {

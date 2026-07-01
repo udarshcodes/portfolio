@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useScrollReveal } from "./hooks/useScrollReveal";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -13,6 +14,8 @@ import Footer from "./components/Footer";
 import NetworkBackground from "./components/NetworkBackground";
 
 function App() {
+  useScrollReveal();
+
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
