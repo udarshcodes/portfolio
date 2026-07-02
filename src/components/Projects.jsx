@@ -89,8 +89,8 @@ export default function Projects() {
           <span className="chip">tree-sitter</span>
         </div>
         <div className="flex-wrap gap-4">
-          <a href="#" className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
-          <a href="https://github.com/udarshcodes/CodeSentinel" className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
+          <a href="https://salmon-ground-0362fac00.7.azurestaticapps.net/" className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
+          <a href="https://github.com/udarshcodes/codesentinel" className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
         </div>
       </div>
 
