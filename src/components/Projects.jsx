@@ -89,8 +89,8 @@ export default function Projects() {
           <span className="chip">tree-sitter</span>
         </div>
         <div className="flex-wrap gap-4">
-          <a href="https://salmon-ground-0362fac00.7.azurestaticapps.net/" className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
-          <a href="https://github.com/udarshcodes/codesentinel" className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
+          <a href="https://salmon-ground-0362fac00.7.azurestaticapps.net/" target="_blank" rel="noreferrer" className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
+          <a href="https://github.com/udarshcodes/codesentinel" target="_blank" rel="noreferrer" className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
         </div>
       </div>
 
@@ -113,9 +113,9 @@ export default function Projects() {
             </div>
             <div className="flex-wrap gap-4">
               {proj.demo && (
-                <a href={proj.demo} className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
+                <a href={proj.demo} target="_blank" rel="noreferrer" className="btn btn-primary btn-md"><FaExternalLinkAlt className="mr-2"/> Live Demo</a>
               )}
-              <a href={proj.github} className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
+              <a href={proj.github} target="_blank" rel="noreferrer" className="btn btn-outline btn-md"><FaGithub className="mr-2"/> GitHub</a>
             </div>
           </div>
         ))}
@@ -140,10 +140,10 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-            <div className="flex-wrap gap-4">
-              <a href={proj.github} className="icon-btn" title="GitHub" aria-label={`GitHub Repository for ${proj.title}`}><FaGithub /></a>
+            <div className="flex-align-center gap-2 mt-4 pt-4" style={{ borderTop: "1px solid var(--border)", marginTop: "auto" }}>
+              <a href={proj.github} target="_blank" rel="noreferrer" className="icon-btn" title="GitHub" aria-label={`GitHub Repository for ${proj.title}`}><FaGithub /></a>
               {proj.demo && (
-                <a href={proj.demo} className="icon-btn" title="Live Demo" aria-label={`Live Demo for ${proj.title}`}><FaExternalLinkAlt /></a>
+                <a href={proj.demo} target="_blank" rel="noreferrer" className="icon-btn" title="Live Demo" aria-label={`Live Demo for ${proj.title}`}><FaExternalLinkAlt /></a>
               )}
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function Projects() {
               </div>
             </div>
             <div className="flex-wrap gap-4">
-              <a href={proj.github} className="icon-btn icon-btn-sm" title="GitHub" aria-label={`GitHub Repository for ${proj.title}`}><FaGithub /></a>
+              <a href={proj.github} target="_blank" rel="noreferrer" className="icon-btn icon-btn-sm" title="GitHub" aria-label={`GitHub Repository for ${proj.title}`}><FaGithub /></a>
             </div>
           </div>
         ))}
