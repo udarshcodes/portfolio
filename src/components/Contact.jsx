@@ -14,18 +14,21 @@ export default function Contact() {
             Whether you have a question, a project idea, or just want to discuss engineering, my inbox is always open.
           </p>
           
-          <div className="flex justify-center">
-            <a href="mailto:udarshgoyal3@gmail.com" className="dispatch-link" style={{ fontSize: '1rem', padding: '1rem 2rem', background: 'var(--ink)', color: 'var(--paper)', textDecoration: 'none', letterSpacing: '0.05em' }}>
+          <div className="flex justify-center" style={{ flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+            <a href="mailto:udarshgoyal3@gmail.com" className="contact-email-btn">
               WRITE AN EMAIL →
             </a>
+            <div className="metadata" style={{ textTransform: 'lowercase', fontSize: '0.9rem' }}>
+              udarshgoyal3@gmail.com
+            </div>
           </div>
           
           <div className="metadata mt-12 flex justify-center" style={{ flexWrap: 'wrap', alignItems: 'center', gap: '2rem' }}>
             <span style={{ color: 'var(--ink-soft)' }}>CHENNAI, INDIA</span>
             <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--rule)' }}></span>
             <div style={{ display: 'flex', gap: '2rem' }}>
-              <a href="https://github.com/udarshcodes" target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}>GITHUB</a>
-              <a href="https://www.linkedin.com/in/udarsh-goyal-256095383/" target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}>LINKEDIN</a>
+              <a href="https://github.com/udarshcodes" target="_blank" rel="noreferrer" className="social-link">GITHUB</a>
+              <a href="https://www.linkedin.com/in/udarsh-goyal-256095383/" target="_blank" rel="noreferrer" className="social-link">LINKEDIN</a>
             </div>
           </div>
         </div>

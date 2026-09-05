@@ -86,9 +86,9 @@ export default function Experience() {
       <div className="metadata mt-8 mb-4 reveal">EXTRACURRICULARS</div>
       <div className="editorial-grid rule-top pt-4 reveal delay-1">
         {extracurriculars.map((exp, idx) => (
-          <div key={idx} className="col-span-4 rule-bottom pb-4 mb-4">
+          <div key={idx} className="col-span-4 pb-4 mb-4 extracurricular-card">
             <div className="metadata mb-1">{exp.date}</div>
-            <h3 className="service-org" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', marginBottom: '0.2rem' }}>{exp.org}</h3>
+            <h3 className="service-org" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', marginBottom: '0.2rem', transition: 'color 0.3s ease' }}>{exp.org}</h3>
             <div className="body-text" style={{ fontSize: '1rem' }}>{exp.role}</div>
           </div>
         ))}

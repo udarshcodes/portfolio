@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CertificationsPage from "./pages/CertificationsPage";
 import ScrollToTop from "./components/ScrollToTop";
+import ThemeSuggestionPopup from "./components/ThemeSuggestionPopup";
 
 function App() {
   useScrollReveal();
@@ -38,6 +39,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <ThemeSuggestionPopup theme={theme} toggleTheme={toggleTheme} />
     </>
   );
 }
