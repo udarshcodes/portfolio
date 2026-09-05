@@ -1,69 +1,58 @@
-import { FaReact, FaPython } from "react-icons/fa";
-import { SiFlask, SiFastapi } from "react-icons/si";
-
 export default function About() {
   return (
-    <section id="about" className="container reveal">
-      <h2 className="section-title">About Me</h2>
+    <section id="about" className="container pt-4 pb-4">
       
-      <div className="grid-300 gap-12">
-        <div className="card">
-          <div className="flex-wrap gap-6 flex-align-center mb-6">
-            <img 
-              src="/images/udarsh.jpg" 
-              alt="Udarsh Goyal" 
-              className="avatar"
-              width="100"
-              height="100"
-            />
-            <div className="flex-wrap gap-4">
-              <span className="badge-pill"><span className="badge-dot"></span> Summer Research Intern @ IIT Ropar</span>
-              <span className="badge-pill"><span className="badge-dot"></span> Google Student Ambassador</span>
-            </div>
-          </div>
-          
-          <p className="text-muted mb-6">
-            I am a Computer Science undergraduate at VIT Chennai with a deep focus on AI/ML systems, agentic pipelines, and full-stack engineering. I built CodeSentinel — a fully autonomous 10-agent LangGraph system for enterprise-level code review and patching. I am currently a Summer Research Intern at IIT Ropar and a Google Student Ambassador (GID 5745), and I actively contribute to Microsoft Innovations Club, HackClub, and CYSCOM at VIT Chennai.
+      {/* Section Header */}
+      <div className="metadata mb-1 reveal">SECTION 01</div>
+      <h2 className="section-heading rule-thick-bottom pb-2 reveal">Technical Profile</h2>
+
+      <div className="editorial-grid mt-4 reveal delay-1">
+        
+        {/* Top Row: Intro & Bio */}
+        <div className="col-span-5 pr-4" style={{ paddingBottom: '2rem' }}>
+          <p className="editorial-subtitle mb-4">
+            "I build autonomous agentic pipelines and highly scalable web systems, bridging the gap between theoretical AI research and production engineering."
           </p>
-          <p className="text-muted">
+        </div>
+
+        <div className="col-span-7 rule-left pl-4" style={{ paddingBottom: '2rem' }}>
+          <p className="body-text mb-4" style={{ textIndent: 'clamp(1rem, 3vw, 3rem)' }}>
+            I am a Computer Science undergraduate at VIT Chennai with a deep focus on AI/ML systems, agentic pipelines, and full stack engineering. I built CodeSentinel, a fully autonomous 10 agent LangGraph system for enterprise level code review and patching. I actively contribute to Microsoft Innovations Club, HackClub, and CYSCOM at VIT Chennai.
+          </p>
+          <p className="body-text mb-4">
             My coursework spans the Meta Back End Developer path, covering Django, Django REST Framework, React, Advanced React, databases, and API design, alongside certifications from Oracle, Microsoft, and MongoDB in AI and cloud fundamentals. Beyond coursework, I have judged hackathons, contributed to open source projects, and placed Top 10 in Nerds AI Quest, a competitive AI focused challenge.
           </p>
         </div>
 
-        <div className="card flex-col flex-between">
-          <div>
-            <h3 className="card-header-sm">Core Technologies</h3>
-            <div className="flex-wrap gap-6 text-muted text-4xl flex-align-center">
-               <FaPython title="Python" />
-               <FaReact title="React" />
-               <SiFastapi title="FastAPI" />
-               <SiFlask title="Flask" />
-               <span className="chip chip-lg">LangGraph</span>
-               <span className="chip chip-lg">Groq</span>
-               <span className="chip chip-lg">tree-sitter</span>
+        {/* Bottom Row: Currently & Stats */}
+        <div className="col-span-5 pr-4 rule-top pt-6">
+          <div className="metadata mb-4">CURRENTLY</div>
+          <div className="metadata mb-2" style={{ color: 'var(--ink)' }}>SUMMER RESEARCH INTERN @ IIT ROPAR</div>
+          <div className="metadata mb-2" style={{ color: 'var(--ink)' }}>GOOGLE STUDENT AMBASSADOR</div>
+        </div>
+
+        <div className="col-span-7 rule-left pl-4 rule-top pt-6">
+          <div className="metadata mb-4">FIELD STATISTICS</div>
+          <div className="editorial-grid rule-bottom pb-4" style={{ gap: '1rem' }}>
+            <div className="col-span-3">
+              <div className="masthead-title" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)' }}>10</div>
+              <div className="metadata mt-1">AGENT PIPELINE</div>
             </div>
-          </div>
-          <div className="stat-container">
-            <div className="flex-wrap gap-8 flex-center">
-              <div className="stat-block">
-                <div className="stat-number">10</div>
-                <div className="stat-label">Agent Pipeline</div>
-              </div>
-              <div className="stat-block">
-                <div className="stat-number">5+</div>
-                <div className="stat-label">Projects Built</div>
-              </div>
-              <div className="stat-block">
-                <div className="stat-number">28+</div>
-                <div className="stat-label">Certifications</div>
-              </div>
-              <div className="stat-block">
-                <div className="stat-number">Top 10</div>
-                <div className="stat-label">Nerds AI Quest</div>
-              </div>
+            <div className="col-span-3 rule-left pl-2">
+              <div className="masthead-title" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)' }}>5+</div>
+              <div className="metadata mt-1">PROJECTS BUILT</div>
+            </div>
+            <div className="col-span-3 rule-left pl-2">
+              <div className="masthead-title" style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)' }}>28+</div>
+              <div className="metadata mt-1">CERTIFICATIONS</div>
+            </div>
+            <div className="col-span-3 rule-left pl-2">
+              <div className="masthead-title" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', letterSpacing: '-0.05em' }}>#10</div>
+              <div className="metadata mt-1">NERDS AI QUEST</div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

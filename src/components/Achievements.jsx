@@ -1,43 +1,50 @@
 export default function Achievements() {
   const achievements = [
     {
-      title: "Selected — Google Student Ambassador (GID 5745)",
-      org: "Google",
-      date: "April 2026",
-      desc: "Officially selected and recognised as a Google Student Ambassador — a program reserved for student leaders who represent Google technologies and programs on campus."
+      title: "Top 45 / 818 Teams — Smart India Hackathon",
+      org: "Smart India Hackathon, VIT Chennai",
+      date: "August 2026",
+      desc: "Cleared two selection rounds at VIT Chennai's internal Smart India Hackathon screening — advanced from 818 teams to the top 201 after an idea pitching round judged on concept, then to the final 45 after a 24 hour build round presented live to judges."
     },
     {
-      title: "Selected — Summer Research Internship",
-      org: "IIT Ropar",
-      date: "May 2026",
-      desc: "Selected for a research internship at one of India's premier IITs, working on applied AI and machine learning projects under faculty guidance."
-    },
-    {
-      title: "Top 10 — Nerds AI Quest 2.0",
-      org: "Nerds AI Quest",
+      title: "2nd Place — Nerds AI Quest 2.0",
+      org: "Nerds AI Quest, [CONFIRM INSTITUTION NAME]",
       date: "January 2026",
-      desc: "Placed in the Top 10 out of a large competitive field in an AI-focused challenge that tested applied machine learning, prompt engineering, and problem-solving skills."
+      desc: "Placed 2nd out of 815 participants in a national AI challenge hosted on Unstop, testing applied machine learning, prompt engineering, and problem solving under time pressure."
     },
     {
-      title: "Open Source Contributor — 8 Merged Pull Requests",
+      title: "Open Source Contributor — 10 Merged Pull Requests",
       org: "Open Source",
       date: "Ongoing",
-      desc: "Contributed to vicharanashala/cs9, HackclubVIT/hc-main-website, SugeethJSA/cyscom-finalised-upgraded-website, and Gowreesh-VT/FFCS-Timetable. Shipped UI overhauls, admin portal features, and performance fixes across four active repositories, spanning React, Next.js, and full stack feature work."
+      desc: "Contributed to multiple major open source repositories including the main HackClub website, the CYSCOM upgraded portal, the FFCS Timetable system, the MIC official website, and AI Hub. Shipped UI overhauls, admin portal features, auth systems, and performance fixes."
+    },
+    {
+      title: "Selected — TechnoVIT'26 Website Committee",
+      org: "VIT Chennai",
+      date: "August 2026",
+      desc: "Selected as a Website Committee member/volunteer for TechnoVIT'26, VIT Chennai's annual technical fest, out of 60+ applicants."
     }
   ];
 
   return (
-    <section id="achievements" className="container">
-      <h2 className="section-title">Achievements</h2>
-      <div className="grid-320 gap-8">
+    <section id="achievements" className="container pt-4 pb-4">
+      <div className="metadata mb-1 reveal">SECTION 06</div>
+      <h2 className="section-heading rule-thick-bottom pb-2 mb-8 reveal">Honors & Achievements</h2>
+      
+      <div className="editorial-grid">
         {achievements.map((item, idx) => (
-          <div key={idx} className="card" style={{ padding: "2rem" }}>
-            <div className="flex-between flex-wrap gap-2 align-start" style={{ marginBottom: "0.75rem" }}>
-              <h3 style={{ margin: 0, fontSize: "1.05rem", color: "var(--text-primary)", lineHeight: 1.4 }}>{item.title}</h3>
-              <span className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-secondary)", whiteSpace: "nowrap" }}>{item.date}</span>
+          <div key={idx} className={`col-span-6 rule-top rule-bottom rule-left rule-right achievement-card reveal delay-${(idx % 3) + 1}`} style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
+            <div className="metadata mb-4 flex justify-between" style={{ flexWrap: 'wrap', gap: '0.5rem' }}>
+              <span>NO. 0{idx + 1}</span>
+              <span>{item.date}</span>
             </div>
-            <div style={{ color: "var(--accent)", fontSize: "0.85rem", fontWeight: 600, marginBottom: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>{item.org}</div>
-            <p className="text-muted-sm" style={{ margin: 0 }}>{item.desc}</p>
+            <h3 className="dispatch-title" style={{ fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', marginBottom: '0.5rem' }}>
+              {item.title}
+            </h3>
+            <div className="metadata mb-4" style={{ color: 'var(--stamp)' }}>{item.org}</div>
+            <p className="body-text" style={{ fontSize: '1rem' }}>
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>

@@ -1,56 +1,49 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiFileText } from "react-icons/fi";
-import Typewriter from 'typewriter-effect';
-
 export default function Hero() {
   return (
-    <section id="home" className="container flex-col flex-center min-h-screen pt-24">
-      <div className="text-center animate-fade-in flex-col flex-align-center w-full">
+    <section id="home" className="container pt-2 pb-2 mt-4 mb-8">
+      
+      {/* Metadata Row */}
+      <div className="metadata flex justify-between rule-thick-bottom pb-2 mb-4 animate-fade-in delay-1" style={{ flexWrap: 'wrap', gap: '0.5rem' }}>
+        <span>ENGINEERING PORTFOLIO</span>
+        <span>2026 EDITION</span>
+      </div>
 
-        <div className="badge-pill delay-1 mb-6">
-          <span className="badge-dot"></span>
-          Available for opportunities
+      {/* Large Name */}
+      <h1 className="masthead-title mb-2 animate-fade-in delay-2">
+        Udarsh Goyal.
+      </h1>
+
+      {/* Sub-metadata */}
+      <div className="metadata flex justify-between rule-bottom pb-2 mb-8 animate-fade-in delay-2" style={{ flexWrap: 'wrap', gap: '0.5rem' }}>
+        <span>SOFTWARE ENGINEER & AI RESEARCHER</span>
+        <span>AVAILABLE FOR OPPORTUNITIES</span>
+      </div>
+
+      {/* Split Content */}
+      <div className="editorial-grid animate-fade-in delay-3">
+        <div className="col-span-8 hero-text-col" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+           <p className="editorial-subtitle mb-4">
+             CS Undergrad @ VIT Chennai, AI/ML Researcher @ IIT Ropar, and Full Stack Developer.
+           </p>
+           <p className="body-text-lg mb-8">
+             Builder of CodeSentinel and Google Student Ambassador. I specialize in crafting technical systems, engineering intelligent platforms, and pushing the boundaries of web experiences.
+           </p>
+           
+           <div className="flex gap-4" style={{ flexWrap: 'wrap' }}>
+             <a href="#projects" className="dispatch-link" style={{fontSize: 'clamp(0.8rem, 1.5vw, 1rem)'}}>VIEW PROJECTS →</a>
+             <a href="#contact" className="dispatch-link" style={{fontSize: 'clamp(0.8rem, 1.5vw, 1rem)', color: 'var(--ink)'}}>HIRE ME →</a>
+             <a href="/pdf/OCI_FOUNDATIONS_ASSOCIATE.pdf" download className="dispatch-link" style={{fontSize: 'clamp(0.8rem, 1.5vw, 1rem)', color: 'var(--ink-soft)'}}>RESUME ↓</a>
+           </div>
         </div>
-
-        <h1 className="hero-title delay-2" aria-label="Udarsh Goyal">
-          Udarsh<br />Goyal.
-        </h1>
-
-        <div className="delay-3 hero-typewriter">
-          <Typewriter
-            options={{
-              strings: ['CS Undergrad @ VIT Chennai', 'AI/ML Researcher @ IIT Ropar', 'Builder of CodeSentinel', 'Google Student Ambassador', 'Full-Stack Developer'],
-              autoStart: true,
-              loop: true,
-              delay: 30,
-              deleteSpeed: 15
-            }}
-          />
-        </div>
-
-        <div className="flex-wrap flex-center gap-6 delay-3 mb-12">
-          <a href="#projects" className="btn btn-primary">
-            View Projects
-          </a>
-          <a href="#contact" className="btn btn-outline">
-            Hire Me / Contact
-          </a>
-          <a href="/pdf/OCI_FOUNDATIONS_ASSOCIATE.pdf" download className="btn btn-outline flex-align-center gap-2">
-            <FiFileText /> Download Resume
-          </a>
-        </div>
-
-        <div className="flex-center gap-6 delay-3 text-muted-sm">
-          <a href="https://github.com/udarshcodes" target="_blank" rel="noreferrer" aria-label="GitHub Profile" className="flex-center gap-2 social-link">
-            <span className="icon-btn icon-lg"><FaGithub size={16} /></span>
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/udarsh-goyal-256095383/" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" className="flex-center gap-2 social-link">
-            <span className="icon-btn icon-lg"><FaLinkedin size={16} /></span>
-            LinkedIn
-          </a>
+        
+        <div className="col-span-4 hero-img-col">
+           <div className="editorial-photo-wrapper" style={{ minHeight: '300px' }}>
+             <img src="/images/udarsh.jpg" alt="Udarsh Goyal" className="editorial-photo" />
+           </div>
+           <div className="metadata mt-2 text-center">FIG 1. PORTRAIT</div>
         </div>
       </div>
+
     </section>
   );
 }

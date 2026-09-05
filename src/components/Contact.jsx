@@ -1,29 +1,33 @@
-import { FaGithub, FaLinkedin, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
-
 export default function Contact() {
   return (
-    <section id="contact" className="container pb-12 reveal">
-      <h2 className="section-title">Get In Touch</h2>
+    <section id="contact" className="container pt-4 pb-8 mb-8">
+      <div className="metadata mb-1 reveal">SECTION 08</div>
+      <h2 className="section-heading rule-thick-bottom pb-2 mb-8 reveal">Correspondence</h2>
       
-      <div className="card flex-col flex-align-center text-center contact-card">
-        <div className="badge-pill mb-8">
-          <span className="badge-dot"></span>
-          Open to opportunities
-        </div>
-        
-        <h3 className="contact-title">Let's build something great.</h3>
-        <p className="text-muted max-w-600 mb-12">
-          Whether you have a question, a project idea, or just want to say hi, my inbox is always open. I'll try my best to get back to you!
-        </p>
-
-        <a href="mailto:udarshgoyal3@gmail.com" className="btn btn-primary btn-lg mb-12">
-          <FaEnvelope style={{ marginRight: "0.5rem" }} /> Say Hello
-        </a>
-
-        <div className="flex-wrap flex-center gap-8 text-muted">
-           <div className="flex-center gap-2"><FaMapMarkerAlt color="var(--accent)" /> Chennai</div>
-           <a href="https://github.com/udarshcodes" target="_blank" rel="noreferrer" aria-label="GitHub Profile" className="flex-center gap-2 social-link-accent"><FaGithub color="var(--accent)" /> GitHub</a>
-           <a href="https://www.linkedin.com/in/udarsh-goyal-256095383/" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" className="flex-center gap-2 social-link-accent"><FaLinkedin color="var(--accent)" /> LinkedIn</a>
+      <div className="editorial-grid reveal delay-1">
+        <div className="col-span-12 rule-top rule-bottom rule-left rule-right" style={{ padding: 'clamp(2rem, 8vw, 6rem) clamp(1.5rem, 4vw, 3rem)', textAlign: 'center', background: 'var(--paper-bright)' }}>
+          <div className="metadata mb-6" style={{ letterSpacing: '0.1em' }}>OPEN FOR OPPORTUNITIES</div>
+          <h3 className="masthead-title" style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', textTransform: 'none', marginBottom: '1.5rem', lineHeight: '1.1' }}>
+            Let's build something useful.
+          </h3>
+          <p className="body-text" style={{ maxWidth: '540px', margin: '0 auto', marginBottom: '3.5rem', textAlign: 'center', fontSize: '1.1rem' }}>
+            Whether you have a question, a project idea, or just want to discuss engineering, my inbox is always open.
+          </p>
+          
+          <div className="flex justify-center">
+            <a href="mailto:udarshgoyal3@gmail.com" className="dispatch-link" style={{ fontSize: '1rem', padding: '1rem 2rem', background: 'var(--ink)', color: 'var(--paper)', textDecoration: 'none', letterSpacing: '0.05em' }}>
+              WRITE AN EMAIL →
+            </a>
+          </div>
+          
+          <div className="metadata mt-12 flex justify-center" style={{ flexWrap: 'wrap', alignItems: 'center', gap: '2rem' }}>
+            <span style={{ color: 'var(--ink-soft)' }}>CHENNAI, INDIA</span>
+            <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--rule)' }}></span>
+            <div style={{ display: 'flex', gap: '2rem' }}>
+              <a href="https://github.com/udarshcodes" target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}>GITHUB</a>
+              <a href="https://www.linkedin.com/in/udarsh-goyal-256095383/" target="_blank" rel="noreferrer" style={{ transition: 'opacity 0.2s' }}>LINKEDIN</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

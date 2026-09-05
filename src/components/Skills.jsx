@@ -18,7 +18,7 @@ export default function Skills() {
     },
     {
       name: "AI / ML & Agentic Systems",
-      skills: ["Machine Learning", "Deep Learning", "LangGraph", "Groq", "tree-sitter", "ChromaDB", "Prompt Engineering", "Generative AI", "LLM Fine-tuning", "Scikit-learn", "Hugging Face", "OpenCV", "Qiskit"]
+      skills: ["Machine Learning", "Deep Learning", "LangGraph", "Groq", "tree sitter", "ChromaDB", "Prompt Engineering", "Generative AI", "LLM Fine tuning", "Scikit learn", "Hugging Face", "OpenCV", "Qiskit"]
     },
     {
       name: "Cloud & DevOps",
@@ -31,23 +31,32 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="container reveal">
-      <h2 className="section-title">Skills</h2>
-      <div className="grid-320 gap-6 align-start">
-        {categories.map((cat, idx) => (
-          <div key={idx} className="card" style={{ padding: "1.5rem" }}>
-            <h3 style={{ color: "var(--accent)", margin: "0 0 1.2rem 0", fontSize: "1.1rem", borderBottom: "1px solid var(--border)", paddingBottom: "0.5rem" }}>
-              {cat.name}
-            </h3>
-            <div className="flex-wrap gap-2">
-              {cat.skills.map((skill, sIdx) => (
-                <span key={sIdx} className="chip" style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-primary)", padding: "0.25rem 0.6rem", fontSize: "0.75rem" }}>
-                  {skill}
-                </span>
-              ))}
+    <section id="skills" className="container pt-4 pb-4">
+      <div className="metadata mb-1 reveal">SECTION 03</div>
+      <h2 className="section-heading rule-thick-bottom pb-2 mb-8 reveal">Technical Competencies</h2>
+      
+      <div className="skills-columns">
+        {categories.map((cat, idx) => {
+          const numStr = idx + 1 < 10 ? `0${idx + 1}` : `${idx + 1}`;
+          return (
+            <div key={idx} className={`rule-top rule-bottom py-4 mb-6 reveal delay-${(idx % 3) + 1}`} style={{ paddingRight: '1rem', breakInside: 'avoid', pageBreakInside: 'avoid' }}>
+              <h3 className="dispatch-title uppercase" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', marginBottom: '1rem' }}>
+                <span className="font-mono text-ink-soft mr-2">{numStr} /</span> {cat.name}
+              </h3>
+              <p className="body-text font-sans" style={{ fontSize: '0.95rem', lineHeight: '1.8', margin: 0, fontWeight: 500 }}>
+                {cat.skills.map((skill, sIdx) => (
+                  <span key={sIdx}>
+                    <span className="skill-inline-item cursor-default">{skill}</span>
+                    {sIdx < cat.skills.length - 1 && (
+                      <span style={{ color: 'var(--stamp)', margin: '0 0.5rem' }}>·</span>
+                    )}
+                    {" "}
+                  </span>
+                ))}
+              </p>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
