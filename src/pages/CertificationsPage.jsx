@@ -23,17 +23,18 @@ export default function CertificationsPage() {
     if (badge) return badge;
     const domains = {
       "Oracle": "oracle.com",
-      "McKinsey": "mckinsey.com",
       "MongoDB": "mongodb.com",
-      "Google": "google.com",
+      "Harvard University": "harvard.edu",
+      "HackerRank": "hackerrank.com",
+      "DevTown": "devtown.in",
       "Microsoft": "microsoft.com",
-      "Meta": "meta.com",
-      "IIT Madras": "iitm.ac.in",
-      "IBM": "ibm.com",
-      "Harvard": "harvard.edu",
-      "HackerRank": "hackerrank.com"
+      "Microsoft Azure": "microsoft.com",
+      "Microsoft Applied Skills": "microsoft.com"
     };
-    if (org === 'Meta') return 'https://cdn.simpleicons.org/meta';
+    if (org.includes('Meta')) return 'https://cdn.simpleicons.org/meta';
+    if (org.includes('Google')) return 'https://cdn.simpleicons.org/google';
+    if (org.includes('McKinsey')) return 'https://cdn.brandfetch.io/mckinsey.com/w/128/h/128';
+    if (org === 'IIT Madras Shaastra') return 'https://upload.wikimedia.org/wikipedia/en/6/69/IIT_Madras_Logo.svg';
     if (domains[org]) return `https://www.google.com/s2/favicons?sz=64&domain=${domains[org]}`;
     return null;
   };

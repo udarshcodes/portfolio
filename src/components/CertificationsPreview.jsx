@@ -6,6 +6,26 @@ export default function CertificationsPreview() {
   // Duplicate for seamless infinite marquee loop
   const marqueeItems = [...featuredCerts, ...featuredCerts];
 
+  const getOrgLogo = (org, badge) => {
+    if (badge) return badge;
+    const domains = {
+      "Oracle": "oracle.com",
+      "MongoDB": "mongodb.com",
+      "Harvard University": "harvard.edu",
+      "HackerRank": "hackerrank.com",
+      "DevTown": "devtown.in",
+      "Microsoft": "microsoft.com",
+      "Microsoft Azure": "microsoft.com",
+      "Microsoft Applied Skills": "microsoft.com"
+    };
+    if (org.includes('Meta')) return 'https://cdn.simpleicons.org/meta';
+    if (org.includes('Google')) return 'https://cdn.simpleicons.org/google';
+    if (org.includes('McKinsey')) return 'https://cdn.brandfetch.io/mckinsey.com/w/128/h/128';
+    if (org === 'IIT Madras Shaastra') return 'https://upload.wikimedia.org/wikipedia/en/6/69/IIT_Madras_Logo.svg';
+    if (domains[org]) return `https://www.google.com/s2/favicons?sz=128&domain=${domains[org]}`;
+    return null;
+  };
+
   return (
     <section id="certifications-preview" className="container pt-4 pb-4 overflow-hidden">
       <div className="reveal">
@@ -32,8 +52,8 @@ export default function CertificationsPreview() {
                 <div className="cert-card-inner">
                   {/* Badge or Initial Fallback */}
                   <div className="cert-card-badge-wrapper">
-                    {cert.badge ? (
-                      <img src={cert.badge} alt={cert.title} className="cert-card-img" />
+                    {getOrgLogo(cert.org, cert.badge) ? (
+                      <img src={getOrgLogo(cert.org, cert.badge)} alt={cert.title} className="cert-card-img" />
                     ) : (
                       <div className="cert-card-fallback">
                         {cert.org.charAt(0)}
