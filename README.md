@@ -10,18 +10,18 @@ Hosted via Render.
 
 ## About
 
-This is my personal portfolio built to serve as a central hub for my skills, educational background, certifications, and hands-on projects. I built it to target recruiters and technical peers to demonstrate my competence in web development, machine learning, and cloud computing. The application is a frontend-only static site without a backend database.
+This is my personal portfolio built to serve as a central hub for my skills, educational background, certifications, and hands on projects. I built it to target recruiters and technical peers to demonstrate my competence in web development, machine learning, and cloud computing. The application is a frontend only static site without a backend database.
 
 ## Features
 
-- **Premium Glassmorphism UI:** Semi-transparent frosted-glass cards with subtle highlights and responsive drop shadows.
-- **Dynamic Theming:** Toggle between dark and light themes using the navigation bar.
-- **Interactive Background:** A network particle effect rendered on an HTML5 canvas that adapts to the active theme, with reduced-motion support for accessibility.
-- **Tiered Projects Portfolio:** A structured three-tier architecture (Featured, Foundational, Labs) showcasing full-stack, AI, and hardware integrations.
+- **Editorial Newspaper Aesthetic:** A premium, typography driven design featuring warm paper backgrounds, sharp borders, and monochromatic styling inspired by editorial publications.
+- **Dynamic Theming:** Toggle between a warm light mode and a sleek dark mode using the navigation bar.
+- **Scroll Reveal Animations:** Elegant fade and slide animations triggered on scroll, with full reduced motion support for accessibility.
+- **Tiered Projects Portfolio:** A structured three tier architecture (Flagship, Featured, Labs) showcasing full stack, AI, and hardware integrations.
 - **Detailed Timelines:** Scroll through an academic and professional timeline detailing coursework, research internships, and core committee roles.
-- **Categorized Skills:** Browse a grid of technical skills structured by domain (AI/ML, Frontend, Backend, Cloud).
-- **Achievements & Certifications:** View 28 verified credentials from industry leaders like Meta, MongoDB, Oracle, Harvard, and Microsoft, complete with dynamically fetched company logos and direct verification links.
-- **SEO & Mobile Optimized:** Fully responsive design featuring a stateful mobile hamburger menu, comprehensive Open Graph metadata, and search engine crawler configurations (sitemap and robots.txt).
+- **Categorized Skills:** Browse a grid of technical skills structured by domain (AI/ML, Frontend, Backend, Cloud) using a clean multi column layout.
+- **Achievements & Certifications:** View verified credentials from industry leaders like Meta, MongoDB, Oracle, Harvard, and Microsoft. Includes a dedicated index page with dynamically fetched company logos and direct verification links.
+- **SEO & Mobile Optimized:** Fully responsive design featuring a stateful mobile hamburger menu, comprehensive Open Graph metadata, and search engine crawler configurations.
 
 ## Tech Stack
 
@@ -30,12 +30,12 @@ This is my personal portfolio built to serve as a central hub for my skills, edu
 | Frontend Framework | React |
 | Build Tool | Vite |
 | Styling | Vanilla CSS / CSS Variables |
-| Icons | react-icons, lucide-react |
-| Animations | typewriter-effect, HTML5 Canvas |
+| Icons | react icons, lucide react |
+| Animations | Custom CSS Keyframes |
 
 ## Architecture
 
-The application is a single-page React frontend. The root `App.jsx` container manages the global light and dark theme state and passes it down. The `NetworkBackground` component operates an HTML5 Canvas to render a dynamic particle effect independent of the main content flow. The site is structured into distinct functional components—such as `Hero`, `About`, `Experience`, and `Projects`—that are sequentially rendered to create a cohesive, scrollable landing page.
+The application is a React frontend leveraging Vite for lightning fast builds. The root `App.jsx` container manages the global light and dark theme state and routing via React Router. The site is structured into distinct functional components such as `Hero`, `About`, `Experience`, and `Projects`. It features a dedicated `/certifications` route for a full tabular index of credentials.
 
 ## Running Locally
 
@@ -55,7 +55,7 @@ The application is a single-page React frontend. The root `App.jsx` container ma
    ```bash
    npm run dev
    ```
-5. Open your browser and navigate to the URL provided in the terminal (typically `http://localhost:5173`).
+5. Open your browser and navigate to the URL provided in the terminal.
 
 ## Project Structure
 
@@ -71,16 +71,22 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 │   ├── components/
 │   │   ├── About.jsx
 │   │   ├── Achievements.jsx
-│   │   ├── Certifications.jsx
+│   │   ├── CertificationsPreview.jsx
 │   │   ├── Contact.jsx
 │   │   ├── Education.jsx
 │   │   ├── Experience.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Hero.jsx
 │   │   ├── Navbar.jsx
-│   │   ├── NetworkBackground.jsx
 │   │   ├── Projects.jsx
 │   │   └── Skills.jsx
+│   ├── data/
+│   │   └── certifications.js
+│   ├── hooks/
+│   │   └── useScrollReveal.js
+│   ├── pages/
+│   │   ├── CertificationsPage.jsx
+│   │   └── Home.jsx
 │   ├── App.jsx
 │   ├── index.css
 │   └── main.jsx
@@ -91,9 +97,8 @@ The application is a single-page React frontend. The root `App.jsx` container ma
 
 ## What I learned or key decisions
 
-- **Glassmorphism Design:** Achieved a highly premium "frosted glass" aesthetic using CSS `backdrop-filter: blur()`, semi-transparent `rgba` variables, and specular border highlights without relying on Tailwind or external libraries.
-- **Custom Canvas Background:** Implemented the particle network effect natively using the HTML5 Canvas API instead of relying on heavy third-party libraries, keeping the bundle size small.
-- **Accessibility:** Incorporated `@media (prefers-reduced-motion: reduce)` to gracefully disable animations and canvas effects for users with sensitivity to motion.
-- **CSS Variables for Theming:** Used native CSS custom properties defined on the root element to handle dark and light modes, avoiding the need for CSS-in-JS libraries.
-- **Dynamic Asset Integration:** Replaced heavy local static assets (images and PDFs) with direct integrations to verification platforms (Credly, Coursera), and dynamically fetched company logos via the Google Favicon API and GitHub organization avatars for robust, lightweight presentation.
-
+- **Editorial Design System:** Shifted from generic glassmorphism to a highly opinionated newspaper aesthetic. Utilized CSS variables to enforce strict color palettes (ink, paper, rule) and clamped typography for fluid scaling across devices.
+- **Accessibility:** Incorporated `@media (prefers-reduced-motion: reduce)` to gracefully disable animations for users with sensitivity to motion, ensuring critical content is never hidden behind opacity transitions.
+- **CSS Column Layouts:** Leveraged native CSS `column-count` for Masonry style text layouts in the Skills section, avoiding heavy JavaScript grid calculations.
+- **CSS Variables for Theming:** Used native CSS custom properties defined on the root element to handle dark and light modes, avoiding the need for CSS in JS libraries.
+- **Dynamic Asset Integration:** Replaced heavy local static assets with direct integrations to verification platforms (Credly, Coursera), and dynamically fetched company logos via Google Favicons, Brandfetch, and SimpleIcons for robust, lightweight presentation.
