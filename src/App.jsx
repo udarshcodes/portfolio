@@ -1,17 +1,10 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Certifications from "./components/Certifications";
-import Achievements from "./components/Achievements";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import NetworkBackground from "./components/NetworkBackground";
+import Home from "./pages/Home";
+import CertificationsPage from "./pages/CertificationsPage";
 
 function App() {
   useScrollReveal();
@@ -35,18 +28,12 @@ function App() {
 
   return (
     <>
-      <NetworkBackground theme={theme} />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Education />
-        <Projects />
-        <Skills />
-        <Certifications />
-        <Achievements />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
+        </Routes>
       </main>
       <Footer />
     </>
