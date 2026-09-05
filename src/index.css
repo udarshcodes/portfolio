@@ -704,12 +704,19 @@ header.sticky {
   }
   .cert-row.clickable:hover {
     background-color: var(--paper-bright);
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    border-bottom-color: transparent;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .cert-row:hover .cert-title {
-    transform: translateX(4px);
+    transform: translateX(8px);
+    color: var(--stamp);
   }
   .cert-row:hover .cert-link {
-    transform: translateX(4px);
+    transform: translateX(8px);
   }
 }
 

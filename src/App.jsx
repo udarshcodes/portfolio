@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CertificationsPage from "./pages/CertificationsPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   useScrollReveal();
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Routes>

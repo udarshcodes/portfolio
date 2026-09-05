@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export function useScrollReveal() {
+  const { pathname } = useLocation();
+
   useEffect(() => {
     const observerCallback = (entries, observer) => {
       entries.forEach((entry) => {
@@ -19,12 +22,16 @@ export function useScrollReveal() {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach((el) => observer.observe(el));
+    const timeout = setTimeout(() => {
+      const revealElements = document.querySelectorAll('.reveal');
+      revealElements.forEach((el) => observer.observe(el));
+    }, 100);
 
     return () => {
+      clearTimeout(timeout);
+      const revealElements = document.querySelectorAll('.reveal');
       revealElements.forEach((el) => observer.unobserve(el));
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 }

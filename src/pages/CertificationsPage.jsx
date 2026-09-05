@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { certifications } from "../data/certifications";
-import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function CertificationsPage() {
-  useScrollReveal();
 
   // Group by year
   const groupedCerts = certifications.reduce((acc, cert) => {
@@ -52,8 +50,8 @@ export default function CertificationsPage() {
         <div className="cert-archive-rule"></div>
       </div>
 
-      {sortedYears.map((year) => (
-        <div key={year} className="reveal mb-8">
+      {sortedYears.map((year, yIdx) => (
+        <div key={year} className={`reveal mb-8 delay-${(yIdx % 3) + 1}`}>
           <div className="cert-year-label">{year}</div>
           <div className="rule-thick-bottom mb-4"></div>
           
