@@ -1,25 +1,25 @@
 export default function Achievements() {
   const achievements = [
     {
-      title: "Top 45 / 818 Teams — Smart India Hackathon",
+      title: "Top 45 out of 818 Teams at Smart India Hackathon",
       org: "Smart India Hackathon, VIT Chennai",
       date: "August 2026",
-      desc: "Cleared two selection rounds at VIT Chennai's internal Smart India Hackathon screening — advanced from 818 teams to the top 201 after an idea pitching round judged on concept, then to the final 45 after a 24 hour build round presented live to judges."
+      desc: "Cleared two selection rounds at VIT Chennai's internal Smart India Hackathon screening, advancing from 818 teams to the top 201 after an idea pitching round judged on concept, then to the final 45 after a 24 hour build round presented live to judges."
     },
     {
-      title: "2nd Place — Nerds AI Quest 2.0",
-      org: "Nerds AI Quest, [CONFIRM INSTITUTION NAME]",
+      title: "2nd Place at Nerds AI Quest 2.0",
+      org: "Nerds AI Quest",
       date: "January 2026",
       desc: "Placed 2nd out of 815 participants in a national AI challenge hosted on Unstop, testing applied machine learning, prompt engineering, and problem solving under time pressure."
     },
     {
-      title: "Open Source Contributor — 10 Merged Pull Requests",
+      title: "Open Source Contributor with 10 Merged Pull Requests",
       org: "Open Source",
       date: "Ongoing",
       desc: "Contributed to multiple major open source repositories including the main HackClub website, the CYSCOM upgraded portal, the FFCS Timetable system, the MIC official website, and AI Hub. Shipped UI overhauls, admin portal features, auth systems, and performance fixes."
     },
     {
-      title: "Selected — TechnoVIT'26 Website Committee",
+      title: "Selected for TechnoVIT'26 Website Committee",
       org: "VIT Chennai",
       date: "August 2026",
       desc: "Selected as a Website Committee member/volunteer for TechnoVIT'26, VIT Chennai's annual technical fest, out of 60+ applicants."
