@@ -9,13 +9,13 @@ export default function About() {
       <div className="editorial-grid mt-4 reveal delay-1">
         
         {/* Top Row: Intro & Bio */}
-        <div className="col-span-5 pr-4" style={{ paddingBottom: '2rem' }}>
+        <div className="col-span-5 pr-4">
           <p className="editorial-subtitle mb-4">
             "I build autonomous agentic pipelines and highly scalable web systems, bridging the gap between theoretical AI research and production engineering."
           </p>
         </div>
 
-        <div className="col-span-7 rule-left pl-4" style={{ paddingBottom: '2rem' }}>
+        <div className="col-span-7 rule-left pl-4">
           <p className="body-text mb-4" style={{ textIndent: 'clamp(1rem, 3vw, 3rem)' }}>
             I am a Computer Science undergraduate at VIT Chennai with a deep focus on AI/ML systems, agentic pipelines, and full stack engineering. I built CodeSentinel, a fully autonomous 10 agent LangGraph system for enterprise level code review and patching. I actively contribute to Microsoft Innovations Club, HackClub, and CYSCOM at VIT Chennai.
           </p>
