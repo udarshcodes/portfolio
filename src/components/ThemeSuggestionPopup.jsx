@@ -1,33 +1,17 @@
-import { useState, useEffect } from 'react';
+
 
 export default function ThemeSuggestionPopup({ theme, toggleTheme }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const isVisible = theme === 'light' && !localStorage.getItem('themeSuggestionDismissed');
 
-  useEffect(() => {
-    // Only show if the current theme is light
-    if (theme !== 'light') {
-      setIsVisible(false);
-      return;
-    }
 
-    const dismissed = localStorage.getItem('themeSuggestionDismissed');
-    if (dismissed) return;
-
-    // Show popup after 2.5 seconds of being in light mode
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  }, [theme]);
 
   const handleDismiss = () => {
-    setIsVisible(false);
+
     localStorage.setItem('themeSuggestionDismissed', 'true');
   };
 
   const handleSwitch = () => {
-    setIsVisible(false);
+
     localStorage.setItem('themeSuggestionDismissed', 'true');
     toggleTheme();
   };
