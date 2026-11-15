@@ -6,8 +6,8 @@ export default function ThemeSuggestionPopup({ theme, toggleTheme }) {
   useEffect(() => {
     // Only show if the current theme is light
     if (theme !== 'light') {
-      setIsVisible(false);
-      return;
+      const codesentinelEffectReset = setTimeout(() => setIsVisible(false), 0);
+      return () => clearTimeout(codesentinelEffectReset);
     }
 
     const dismissed = localStorage.getItem('themeSuggestionDismissed');
