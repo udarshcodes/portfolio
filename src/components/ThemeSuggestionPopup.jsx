@@ -6,7 +6,6 @@ export default function ThemeSuggestionPopup({ theme, toggleTheme }) {
   useEffect(() => {
     // Only show if the current theme is light
     if (theme !== 'light') {
-      setIsVisible(false);
       return;
     }
 
@@ -19,6 +18,14 @@ export default function ThemeSuggestionPopup({ theme, toggleTheme }) {
     }, 2500);
 
     return () => clearTimeout(timer);
+  }, [theme]);
+
+  // Ensure visibility is reset when theme is not light, deferred to next tick
+  useEffect(() => {
+    if (theme !== 'light') {
+      const id = setTimeout(() => setIsVisible(false), 0);
+      return () => clearTimeout(id);
+    }
   }, [theme]);
 
   const handleDismiss = () => {
